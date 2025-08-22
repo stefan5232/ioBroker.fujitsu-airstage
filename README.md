@@ -1,18 +1,18 @@
 ![Logo](admin/fujitsu.png)
-# ioBroker.fujitsu
+# ioBroker.fujitsu-airstage
 
-[![NPM version](https://img.shields.io/npm/v/iobroker.fujitsu.svg)](https://www.npmjs.com/package/iobroker.fujitsu)
-[![Downloads](https://img.shields.io/npm/dm/iobroker.fujitsu.svg)](https://www.npmjs.com/package/iobroker.fujitsu)
-![Number of Installations](https://iobroker.live/badges/fujitsu-installed.svg)
-![Current version in stable repository](https://iobroker.live/badges/fujitsu-stable.svg)
+[![NPM version](https://img.shields.io/npm/v/iobroker.fujitsu.svg)](https://www.npmjs.com/package/iobroker.fujitsu-airstage)
+[![Downloads](https://img.shields.io/npm/dm/iobroker.fujitsu.svg)](https://www.npmjs.com/package/iobroker.fujitsu-airstage)
+![Number of Installations](https://iobroker.live/badges/fujitsu-airstage-installed.svg)
+![Current version in stable repository](https://iobroker.live/badges/fujitsu-airstage-stable.svg)
 
-[![NPM](https://nodei.co/npm/iobroker.fujitsu.png?downloads=true)](https://nodei.co/npm/iobroker.fujitsu/)
+[![NPM](https://nodei.co/npm/iobroker.fujitsu.png?downloads=true)](https://nodei.co/npm/iobroker.fujitsu-airstage/)
 
-**Tests:** ![Test and Release](https://github.com/stefan5232/ioBroker.fujitsu/workflows/Test%20and%20Release/badge.svg)
+**Tests:** ![Test and Release](https://github.com/stefan5232/ioBroker.fujitsu-airstage/workflows/Test%20and%20Release/badge.svg)
 
-## fujitsu adapter for ioBroker
+## fujitsu-airstage adapter for ioBroker
 
-Steuert Fujitsu Klimaanlagen
+Steuert Fujitsu Airstage Klimaanlagen
 
 ## Developer manual
 This section is intended for the developer. It can be deleted later.
@@ -27,7 +27,7 @@ You can check other adapters for examples or ask in the developer community. Usi
 You are almost done, only a few steps left:
 1. Clone the repository from GitHub to a directory on your PC:
     ```bash
-    git clone https://github.com/stefan5232/ioBroker.fujitsu
+    git clone https://github.com/stefan5232/ioBroker.fujitsu-airstage
     ```
 
 1. Head over to [src/main.ts](src/main.ts) and start programming!

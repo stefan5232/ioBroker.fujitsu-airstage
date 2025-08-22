@@ -1,6 +1,6 @@
 {
     "common": {
-        "name": "fujitsu",
+        "name": "fujitsu-airstage",
         "version": "0.0.1",
         "news": {
             "0.0.1": {
@@ -18,30 +18,30 @@
             }
         },
         "titleLang": {
-            "en": "Fujitsu Klimaanlage",
-            "de": "Fujitsu Klimaanlage",
-            "ru": "Fujitsu Klimaanlage",
-            "pt": "Fujitsu Klimaanlage",
-            "nl": "Fujitsu Klimaanlage",
-            "fr": "Fujitsu Klimaanlage",
-            "it": "Fujitsu Klimaanlage",
-            "es": "Fujitsu Klimaanlage",
-            "pl": "Fujitsu Klimaanlage",
-            "uk": "Fujitsu Klimaanlage",
-            "zh-cn": "Fujitsu Klimaanlage"
+            "en": "Fujitsu Airstage Klimaanlage",
+            "de": "Fujitsu Airstage Klimaanlage",
+            "ru": "Fujitsu Airstage Klimaanlage",
+            "pt": "Fujitsu Airstage Klimaanlage",
+            "nl": "Fujitsu Airstage Klimaanlage",
+            "fr": "Fujitsu Airstage Klimaanlage",
+            "it": "Fujitsu Airstage Klimaanlage",
+            "es": "Fujitsu Airstage Klimaanlage",
+            "pl": "Fujitsu Airstage Klimaanlage",
+            "uk": "Fujitsu Airstage Klimaanlage",
+            "zh-cn": "Fujitsu Airstage Klimaanlage"
         },
         "desc": {
-            "en": "Steuert Fujitsu Klimaanlagen",
-            "de": "Steuert Fujitsu Klimaanlagen",
-            "ru": "Steuert Fujitsu Klimaanlagen",
-            "pt": "Steuert Fujitsu Klimaanlagen",
-            "nl": "Steuert Fujitsu Klimaanlagen",
-            "fr": "Steuert Fujitsu Klimaanlagen",
-            "it": "Steuert Fujitsu Klimaanlagen",
-            "es": "Steuert Fujitsu Klimaanlagen",
-            "pl": "Steuert Fujitsu Klimaanlagen",
-            "uk": "Steuert Fujitsu Klimaanlagen",
-            "zh-cn": "Steuert Fujitsu Klimaanlagen"
+            "en": "Steuert Fujitsu Airstage Klimaanlagen",
+            "de": "Steuert Fujitsu Airstage Klimaanlagen",
+            "ru": "Steuert Fujitsu Airstage Klimaanlagen",
+            "pt": "Steuert Fujitsu Airstage Klimaanlagen",
+            "nl": "Steuert Fujitsu Airstage Klimaanlagen",
+            "fr": "Steuert Fujitsu Airstage Klimaanlagen",
+            "it": "Steuert Fujitsu Airstage Klimaanlagen",
+            "es": "Steuert Fujitsu Airstage Klimaanlagen",
+            "pl": "Steuert Fujitsu Airstage Klimaanlagen",
+            "uk": "Steuert Fujitsu Airstage Klimaanlagen",
+            "zh-cn": "Steuert Fujitsu Airstage Klimaanlagen"
         },
         "authors": [
             "stefan5232 <stefan5232@gmx.de>"
@@ -59,8 +59,8 @@
         "platform": "Javascript/Node.js",
         "icon": "fujitsu.png",
         "enabled": true,
-        "extIcon": "https://raw.githubusercontent.com/stefan5232/ioBroker.fujitsu/main/admin/fujitsu.png",
-        "readme": "https://github.com/stefan5232/ioBroker.fujitsu/blob/main/README.md",
+        "extIcon": "https://raw.githubusercontent.com/stefan5232/ioBroker.fujitsu-airstage/main/admin/fujitsu.png",
+        "readme": "https://github.com/stefan5232/ioBroker.fujitsu-airstage/blob/main/README.md",
         "loglevel": "info",
         "tier": 3,
         "mode": "daemon",

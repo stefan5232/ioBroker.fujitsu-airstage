@@ -1,28 +1,28 @@
 {
-  "name": "iobroker.fujitsu",
+  "name": "iobroker.fujitsu-airstage",
   "version": "0.0.1",
-  "description": "Steuert Fujitsu Klimaanlagen",
+  "description": "Steuert Fujitsu Airstage Klimaanlagen",
   "author": {
     "name": "stefan5232",
     "email": "stefan5232@gmx.de"
   },
-  "homepage": "https://github.com/stefan5232/ioBroker.fujitsu",
+  "homepage": "https://github.com/stefan5232/ioBroker.fujitsu-airstage",
   "license": "MIT",
   "keywords": [
     "ioBroker",
-    "template",
-    "Smart Home",
-    "home automation"
+    "fujitsu",
+    "airstage"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/stefan5232/ioBroker.fujitsu.git"
+    "url": "https://github.com/stefan5232/ioBroker.fujitsu-airstage.git"
   },
   "engines": {
     "node": ">= 20"
   },
   "dependencies": {
-    "@iobroker/adapter-core": "^3.2.3"
+    "@iobroker/adapter-core": "^3.2.3",
+    "axios": "^1.11.0"
   },
   "devDependencies": {
     "@alcalzone/release-script": "^3.8.0",

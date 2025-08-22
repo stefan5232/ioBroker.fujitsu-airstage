@@ -1,9 +1,9 @@
 {
     "expert": "yes",
     "cli": false,
-    "adapterName": "fujitsu",
-    "title": "Fujitsu Klimaanlage",
-    "description": "Steuert Fujitsu Klimaanlagen",
+    "adapterName": "fujitsu-airstage",
+    "title": "Fujitsu Airstage Klimaanlage",
+    "description": "Steuert Fujitsu Airstage Klimaanlagen",
     "keywords": "",
     "contributors": "",
     "icon": {
