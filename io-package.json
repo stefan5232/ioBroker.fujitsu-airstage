@@ -44,7 +44,7 @@
             "zh-cn": "Steuert Fujitsu Airstage Klimaanlagen"
         },
         "authors": [
-            "stefan5232 <stefan5232@gmx.de>"
+            "Stefan Bott <stefan5232@gmx.de>"
         ],
         "keywords": [
             "ioBroker",
@@ -75,16 +75,11 @@
             {
                 "js-controller": ">=6.0.11"
             }
-        ],
-        "globalDependencies": [
-            {
-                "admin": "7.0.23"
-            }
         ]
     },
     "native": {
-        "IP": "192.168.0.10",
-        "MAC": "42aa42aa42aa"
+        "devices": [],
+        "pollIntervall": 60
     },
     "objects": [],
     "instanceObjects": []

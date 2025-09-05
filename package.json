@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Steuert Fujitsu Airstage Klimaanlagen",
   "author": {
-    "name": "stefan5232",
+    "name": "Stefan Bott",
     "email": "stefan5232@gmx.de"
   },
   "homepage": "https://github.com/stefan5232/ioBroker.fujitsu-airstage",

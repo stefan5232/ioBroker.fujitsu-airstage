@@ -1,16 +1,41 @@
 {
-    "i18n": true,
-    "type": "panel",
-    "items": {
-        "IP": {
-            "type": "text",
-            "label": "IP-Adresse",
-            "newLine": true
+  "i18n": true,
+  "type": "panel",
+  "items": {
+    "pollInterval": {
+      "type": "number",
+      "label": "Abfrageintervall (Sekunden)",
+      "min": 10,
+      "max": 3600,
+      "default": 30
+    },
+    "devices": {
+      "type": "table",
+      "label": "Fujitsu Airstage Geräte",
+      "items": [
+        {
+          "type": "text",
+          "attr": "name",
+          "title": "Name",
+          "width": "25%",
+          "default": "Klimaanlage"
         },
-        "MAC": {
-            "type": "text",
-            "label": "MAC-Adresse",
-            "newLine": true
+        {
+          "type": "text", 
+          "attr": "ip",
+          "title": "IP-Adresse",
+          "width": "35%",
+          "placeholder": "192.168.1.100"
+        },
+        {
+          "type": "text",
+          "attr": "deviceId", 
+          "title": "Device ID",
+          "width": "40%",
+          "placeholder": "AABBCCDDEEFF",
+          "help": "MAC-Adresse ohne Doppelpunkte"
         }
+      ]
     }
+  }
 }
