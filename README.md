@@ -1,100 +1,112 @@
 ![Logo](admin/fujitsu.png)
+
 # ioBroker.fujitsu-airstage
 
-[![NPM version](https://img.shields.io/npm/v/iobroker.fujitsu.svg)](https://www.npmjs.com/package/iobroker.fujitsu-airstage)
-[![Downloads](https://img.shields.io/npm/dm/iobroker.fujitsu.svg)](https://www.npmjs.com/package/iobroker.fujitsu-airstage)
+[![NPM version](https://img.shields.io/npm/v/iobroker.fujitsu-airstage.svg)](https://www.npmjs.com/package/iobroker.fujitsu-airstage)
+[![Downloads](https://img.shields.io/npm/dm/iobroker.fujitsu-airstage.svg)](https://www.npmjs.com/package/iobroker.fujitsu-airstage)
 ![Number of Installations](https://iobroker.live/badges/fujitsu-airstage-installed.svg)
 ![Current version in stable repository](https://iobroker.live/badges/fujitsu-airstage-stable.svg)
 
-[![NPM](https://nodei.co/npm/iobroker.fujitsu.png?downloads=true)](https://nodei.co/npm/iobroker.fujitsu-airstage/)
+[![NPM](https://nodei.co/npm/iobroker.fujitsu-airstage.png?downloads=true)](https://nodei.co/npm/iobroker.fujitsu-airstage/)
 
 **Tests:** ![Test and Release](https://github.com/stefan5232/ioBroker.fujitsu-airstage/workflows/Test%20and%20Release/badge.svg)
 
-## fujitsu-airstage adapter for ioBroker
+## Fujitsu Airstage Adapter für ioBroker
 
-Steuert Fujitsu Airstage Klimaanlagen
+Dieser Adapter ermöglicht die Steuerung von Fujitsu Airstage Klimaanlagen über ioBroker. Die Klimageräte müssen mit einem WiFi-Modul ausgestattet sein und im lokalen Netzwerk erreichbar sein.
 
-## Developer manual
-This section is intended for the developer. It can be deleted later.
+**Disclaimer**: Dieser Adapter ist ein unabhängiges Community-Projekt und steht in keiner Verbindung zu Fujitsu Limited oder deren Tochtergesellschaften. "Fujitsu" und "Airstage" sind eingetragene Marken von Fujitsu Limited. Die Verwendung erfolgt ausschließlich zur Identifikation kompatibler Geräte.
 
-### DISCLAIMER
+### Funktionen
 
-Please make sure that you consider copyrights and trademarks when you use names or logos of a company and add a disclaimer to your README.
-You can check other adapters for examples or ask in the developer community. Using a name or logo of a company without permission may cause legal problems for you.
+- **Vollständige Steuerung**: Ein-/Ausschalten, Temperatur, Betriebsmodus, Lüftergeschwindigkeit
+- **Erweiterte Funktionen**: Powerful-Modus, Economy-Modus, Lamellenschwenkung (vertikal/horizontal)
+- **Statusüberwachung**: Aktuelle Innen- und Außentemperatur, Stromverbrauch, Gerätestatus
+- **Zusatzfunktionen**: WiFi-LED, Low-Noise-Modus, Human Detection, Energy Saving Fan
+- **Mehrere Geräte**: Unterstützung für beliebig viele Klimaanlagen
+- **Automatische Updates**: Konfigurierbares Abfrageintervall für Statusaktualisierungen
 
-### Getting started
+### Voraussetzungen
 
-You are almost done, only a few steps left:
-1. Clone the repository from GitHub to a directory on your PC:
-    ```bash
-    git clone https://github.com/stefan5232/ioBroker.fujitsu-airstage
-    ```
+- Fujitsu Airstage Klimaanlage mit WiFi-Modul
+- Die Klimaanlage muss im lokalen Netzwerk (LAN/WLAN) erreichbar sein
+- IP-Adresse und Device ID (MAC-Adresse) der Klimaanlage
 
-1. Head over to [src/main.ts](src/main.ts) and start programming!
+### Installation
 
-### Best Practices
-We've collected some [best practices](https://github.com/ioBroker/ioBroker.repositories#development-and-coding-best-practices) regarding ioBroker development and coding in general. If you're new to ioBroker or Node.js, you should
-check them out. If you're already experienced, you should also take a look at them - you might learn something new :)
+1. Adapter über die ioBroker Admin-Oberfläche installieren
+2. Alternativ: `npm install iobroker.fujitsu-airstage`
 
-### Scripts in `package.json`
-Several npm scripts are predefined for your convenience. You can run them using `npm run <scriptname>`
-| Script name | Description |
-|-------------|-------------|
-| `build` | Compile the TypeScript sources. |
-| `watch` | Compile the TypeScript sources and watch for changes. |
-| `test:ts` | Executes the tests you defined in `*.test.ts` files. |
-| `test:package` | Ensures your `package.json` and `io-package.json` are valid. |
-| `test:integration` | Tests the adapter startup with an actual instance of ioBroker. |
-| `test` | Performs a minimal test run on package files and your tests. |
-| `check` | Performs a type-check on your code (without compiling anything). |
-| `lint` | Runs `ESLint` to check your code for formatting errors and potential bugs. |
-| `translate` | Translates texts in your adapter to all required languages, see [`@iobroker/adapter-dev`](https://github.com/ioBroker/adapter-dev#manage-translations) for more details. |
-| `release` | Creates a new release, see [`@alcalzone/release-script`](https://github.com/AlCalzone/release-script#usage) for more details. |
+### Konfiguration
 
-### Configuring the compilation
-The adapter template uses [esbuild](https://esbuild.github.io/) to compile TypeScript and/or React code. You can configure many compilation settings 
-either in `tsconfig.json` or by changing options for the build tasks. These options are described in detail in the
-[`@iobroker/adapter-dev` documentation](https://github.com/ioBroker/adapter-dev#compile-adapter-files).
+#### Device ID ermitteln
 
-### Writing tests
-When done right, testing code is invaluable, because it gives you the 
-confidence to change your code while knowing exactly if and when 
-something breaks. A good read on the topic of test-driven development 
-is https://hackernoon.com/introduction-to-test-driven-development-tdd-61a13bc92d92. 
-Although writing tests before the code might seem strange at first, but it has very 
-clear upsides.
+Die Device ID ist die MAC-Adresse des WiFi-Moduls **ohne Doppelpunkte**:
+- Beispiel MAC-Adresse: `AA:BB:CC:DD:EE:FF`
+- Device ID für den Adapter: `AABBCCDDEEFF`
 
-The template provides you with basic tests for the adapter startup and package files.
-It is recommended that you add your own tests into the mix.
+Die MAC-Adresse finden Sie:
+- In der Fujitsu-App (z.B. FGLair)
+- Im Router unter verbundene Geräte
+- Auf einem Aufkleber am WiFi-Modul
 
-### Publishing the adapter
-Using GitHub Actions, you can enable automatic releases on npm whenever you push a new git tag that matches the form 
-`v<major>.<minor>.<patch>`. We **strongly recommend** that you do. The necessary steps are described in `.github/workflows/test-and-release.yml`.
+#### IP-Adresse ermitteln
 
-Since you installed the release script, you can create a new
-release simply by calling:
-```bash
-npm run release
-```
-Additional command line options for the release script are explained in the
-[release-script documentation](https://github.com/AlCalzone/release-script#command-line).
+Die IP-Adresse der Klimaanlage finden Sie:
+- Im Router unter DHCP-Clients
+- In der Fujitsu-App in den Gerätedetails
 
-To get your adapter released in ioBroker, please refer to the documentation 
-of [ioBroker.repositories](https://github.com/ioBroker/ioBroker.repositories#requirements-for-adapter-to-get-added-to-the-latest-repository).
+**Empfehlung**: Vergeben Sie im Router eine feste IP-Adresse (DHCP-Reservation) für die Klimaanlage.
 
-### Test the adapter manually with dev-server
-Please use `dev-server` to test and debug your adapter.
+#### Adapter-Einstellungen
 
-You may install and start `dev-server` by calling from your dev directory:
-```bash
-npm install --global @iobroker/dev-server
-dev-server setup
-dev-server watch
-```
+1. Öffnen Sie die Adapter-Konfiguration in ioBroker
+2. Fügen Sie ein oder mehrere Geräte hinzu:
+   - **Name**: Frei wählbarer Name (z.B. "Wohnzimmer", "Schlafzimmer")
+   - **IP-Adresse**: Lokale IP-Adresse der Klimaanlage (z.B. 192.168.1.100)
+   - **Device ID**: MAC-Adresse ohne Doppelpunkte (z.B. AABBCCDDEEFF)
+3. **Abfrageintervall**: Legt fest, wie oft der Status abgefragt wird (Standard: 30 Sekunden)
+4. Einstellungen speichern und Instanz starten
 
-Please refer to the [`dev-server` documentation](https://github.com/ioBroker/dev-server#readme) for more details.
+### Datenpunkte
 
-## Changelog
+Für jedes konfigurierte Gerät werden folgende Datenpunkte erstellt:
+
+#### Steuerung (beschreibbar)
+| Datenpunkt | Typ | Beschreibung |
+|------------|-----|--------------|
+| `power` | boolean | Gerät ein-/ausschalten |
+| `target_temperature` | number | Zieltemperatur (16-30°C) |
+| `mode` | string | Betriebsmodus: auto, cool, heat, dry, fan |
+| `fan_speed` | string | Lüftergeschwindigkeit: auto, quiet, low, medium, high |
+| `swing_vertical` | boolean | Vertikale Lamellenschwenkung |
+| `swing_horizontal` | boolean | Horizontale Lamellenschwenkung |
+| `powerful` | boolean | Powerful-Modus (schnelles Heizen/Kühlen) |
+| `economy` | boolean | Economy-Modus (Energiesparen) |
+| `fan_ctrl` | boolean | Energy Saving Fan |
+| `outdoor_low_noise` | boolean | Low-Noise-Modus für Außengerät |
+| `wifi_led` | boolean | WiFi-LED ein/aus |
+| `min_heat` | boolean | Minimum Heat Modus |
+
+#### Status (nur lesbar)
+| Datenpunkt | Typ | Beschreibung |
+|------------|-----|--------------|
+| `current_temperature` | number | Aktuelle Raumtemperatur |
+| `outdoor_temperature` | number | Außentemperatur |
+| `power_consumption` | number | Stromverbrauch in Watt |
+| `vertical_direction` | string | Lamellenrichtung vertikal |
+| `vertical_increments` | number | Vertikale Luftstrom-Schritte |
+| `horizontal_direction` | number | Lamellenrichtung horizontal |
+| `human_detection` | boolean | Personenerkennung aktiv |
+| `online` | boolean | Gerät erreichbar |
+
+### Bekannte Einschränkungen
+
+- Die Fujitsu API limitiert die Anzahl der gleichzeitig abrufbaren Parameter auf ca. 20 Werte
+- Der Parameter `iu_model` (Gerätemodell) wird derzeit nicht abgerufen, da dies die Anzahl der zurückgegebenen Werte stark reduziert
+
+### Changelog
+
 <!--
     Placeholder for the next version (at the beginning of the line):
     ### **WORK IN PROGRESS**
@@ -104,6 +116,7 @@ Please refer to the [`dev-server` documentation](https://github.com/ioBroker/dev
 * (Stefan Bott) initial release
 
 ## License
+
 MIT License
 
 Copyright (c) 2025 Stefan Bott <stefan5232@gmx.de>
@@ -125,3 +138,62 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+---
+
+## English Version
+
+### Fujitsu Airstage Adapter for ioBroker
+
+This adapter enables control of Fujitsu Airstage air conditioners via ioBroker. The air conditioning units must be equipped with a WiFi module and be accessible in the local network.
+
+**Disclaimer**: This adapter is an independent community project and is not affiliated with Fujitsu Limited or its subsidiaries. "Fujitsu" and "Airstage" are registered trademarks of Fujitsu Limited. Their use is solely for the purpose of identifying compatible devices.
+
+### Features
+
+- **Complete Control**: Power on/off, temperature, operation mode, fan speed
+- **Advanced Functions**: Powerful mode, Economy mode, swing control (vertical/horizontal)
+- **Status Monitoring**: Current indoor/outdoor temperature, power consumption, device status
+- **Additional Functions**: WiFi LED, Low-Noise mode, Human Detection, Energy Saving Fan
+- **Multiple Devices**: Support for unlimited number of air conditioners
+- **Automatic Updates**: Configurable polling interval for status updates
+
+### Requirements
+
+- Fujitsu Airstage air conditioner with WiFi module
+- Air conditioner must be accessible in the local network (LAN/WLAN)
+- IP address and Device ID (MAC address) of the air conditioner
+
+### Configuration
+
+#### Finding the Device ID
+
+The Device ID is the MAC address of the WiFi module **without colons**:
+- Example MAC address: `AA:BB:CC:DD:EE:FF`
+- Device ID for adapter: `AABBCCDDEEFF`
+
+You can find the MAC address:
+- In the Fujitsu app (e.g., FGLair)
+- In your router's connected devices list
+- On a sticker on the WiFi module
+
+#### Finding the IP Address
+
+You can find the air conditioner's IP address:
+- In your router under DHCP clients
+- In the Fujitsu app under device details
+
+**Recommendation**: Assign a static IP address (DHCP reservation) for the air conditioner in your router.
+
+### Troubleshooting
+
+#### Device shows as offline
+- Verify the IP address is correct
+- Check if the air conditioner is reachable in the network (ping)
+- Verify the Device ID is correct (12 hexadecimal characters)
+- Ensure no firewall is blocking the connection
+
+#### Commands are not executed
+- Check the log for error messages
+- Increase log level to "debug" for detailed information
+- Ensure the air conditioner is not manually locked

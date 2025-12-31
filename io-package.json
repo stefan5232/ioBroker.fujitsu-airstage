@@ -18,37 +18,41 @@
             }
         },
         "titleLang": {
-            "en": "Fujitsu Airstage Klimaanlage",
+            "en": "Fujitsu Airstage Air Conditioner",
             "de": "Fujitsu Airstage Klimaanlage",
-            "ru": "Fujitsu Airstage Klimaanlage",
-            "pt": "Fujitsu Airstage Klimaanlage",
-            "nl": "Fujitsu Airstage Klimaanlage",
-            "fr": "Fujitsu Airstage Klimaanlage",
-            "it": "Fujitsu Airstage Klimaanlage",
-            "es": "Fujitsu Airstage Klimaanlage",
-            "pl": "Fujitsu Airstage Klimaanlage",
-            "uk": "Fujitsu Airstage Klimaanlage",
-            "zh-cn": "Fujitsu Airstage Klimaanlage"
+            "ru": "Кондиционер Fujitsu Airstage",
+            "pt": "Ar condicionado Fujitsu Airstage",
+            "nl": "Fujitsu Airstage airconditioning",
+            "fr": "Climatiseur Fujitsu Airstage",
+            "it": "Condizionatore Fujitsu Airstage",
+            "es": "Aire acondicionado Fujitsu Airstage",
+            "pl": "Klimatyzator Fujitsu Airstage",
+            "uk": "Кондиціонер Fujitsu Airstage",
+            "zh-cn": "富士通Airstage空调"
         },
         "desc": {
-            "en": "Steuert Fujitsu Airstage Klimaanlagen",
+            "en": "Controls Fujitsu Airstage air conditioners",
             "de": "Steuert Fujitsu Airstage Klimaanlagen",
-            "ru": "Steuert Fujitsu Airstage Klimaanlagen",
-            "pt": "Steuert Fujitsu Airstage Klimaanlagen",
-            "nl": "Steuert Fujitsu Airstage Klimaanlagen",
-            "fr": "Steuert Fujitsu Airstage Klimaanlagen",
-            "it": "Steuert Fujitsu Airstage Klimaanlagen",
-            "es": "Steuert Fujitsu Airstage Klimaanlagen",
-            "pl": "Steuert Fujitsu Airstage Klimaanlagen",
-            "uk": "Steuert Fujitsu Airstage Klimaanlagen",
-            "zh-cn": "Steuert Fujitsu Airstage Klimaanlagen"
+            "ru": "Управляет кондиционерами Fujitsu Airstage",
+            "pt": "Controla ar condicionado Fujitsu Airstage",
+            "nl": "Bedient Fujitsu Airstage airconditioning",
+            "fr": "Contrôle les climatiseurs Fujitsu Airstage",
+            "it": "Controlla i condizionatori Fujitsu Airstage",
+            "es": "Controla aires acondicionados Fujitsu Airstage",
+            "pl": "Steruje klimatyzatorami Fujitsu Airstage",
+            "uk": "Керує кондиціонерами Fujitsu Airstage",
+            "zh-cn": "控制富士通Airstage空调"
         },
         "authors": [
             "Stefan Bott <stefan5232@gmx.de>"
         ],
         "keywords": [
             "ioBroker",
-            "template",
+            "fujitsu",
+            "airstage",
+            "air conditioner",
+            "climate control",
+            "HVAC",
             "Smart Home",
             "home automation"
         ],
@@ -79,7 +83,7 @@
     },
     "native": {
         "devices": [],
-        "pollIntervall": 60
+        "pollInterval": 60
     },
     "objects": [],
     "instanceObjects": []
