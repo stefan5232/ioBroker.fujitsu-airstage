@@ -1,6 +1,6 @@
 {
   "name": "iobroker.fujitsu-airstage",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Steuert Fujitsu Airstage Klimaanlagen",
   "author": {
     "name": "Stefan Bott",
