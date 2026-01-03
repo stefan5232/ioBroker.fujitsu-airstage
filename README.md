@@ -112,6 +112,10 @@ Für jedes konfigurierte Gerät werden folgende Datenpunkte erstellt:
     ### **WORK IN PROGRESS**
 -->
 ### **WORK IN PROGRESS**
+* (S. Bott) Fix ioBroker repository checker errors and warnings
+* (S. Bott) Update dependencies (axios, sinon, typescript-eslint, etc.)
+* (S. Bott) Fix setTimeout memory leak
+* (S. Bott) Fix ESLint compatibility with TypeScript ESLint v8
 
 ### 0.1.0 (2025-12-31)
 * (S. Bott) initial release
