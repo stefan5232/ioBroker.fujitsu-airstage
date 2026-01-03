@@ -26,6 +26,7 @@ var import_axios = __toESM(require("axios"));
 class FujitsuAirstage extends utils.Adapter {
   devices = [];
   updateInterval = null;
+  updateTimeouts = [];
   constructor(options = {}) {
     super({
       ...options,
@@ -518,7 +519,8 @@ class FujitsuAirstage extends utils.Adapter {
       this.log.debug(`BaseUrl: ${device.baseUrl}/GetParam -- Payload: ${JSON.stringify(payload)}`);
       throw new Error(`Command failed: ${response.data.error || response.data.result}`);
     }
-    setTimeout(() => this.updateDeviceData(device), 1e3);
+    const timeout = setTimeout(() => this.updateDeviceData(device), 1e3);
+    this.updateTimeouts.push(timeout);
   }
   mapMode(mode) {
     const modes = {
@@ -584,6 +586,10 @@ class FujitsuAirstage extends utils.Adapter {
         clearInterval(this.updateInterval);
         this.updateInterval = null;
       }
+      for (const timeout of this.updateTimeouts) {
+        clearTimeout(timeout);
+      }
+      this.updateTimeouts = [];
       this.setState("info.connection", false, true);
       this.log.info("Fujitsu Airstage adapter stopped");
       callback();

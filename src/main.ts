@@ -63,6 +63,7 @@ type VerticalDirection = 'highest' | 'high' | 'low' | 'lowest';
 class FujitsuAirstage extends utils.Adapter {
     private devices: AirstageDevice[] = [];
     private updateInterval: NodeJS.Timeout | null = null;
+    private updateTimeouts: NodeJS.Timeout[] = [];
 
     public constructor(options: Partial<utils.AdapterOptions> = {}) {
         super({
@@ -609,7 +610,8 @@ class FujitsuAirstage extends utils.Adapter {
         }
 
         // Nach Kommando kurz warten und Status aktualisieren
-        setTimeout(() => this.updateDeviceData(device), 1000);
+        const timeout = setTimeout(() => this.updateDeviceData(device), 1000);
+        this.updateTimeouts.push(timeout);
     }
 
     private mapMode(mode: number): OperationMode {
@@ -684,6 +686,11 @@ class FujitsuAirstage extends utils.Adapter {
                 clearInterval(this.updateInterval);
                 this.updateInterval = null;
             }
+            // Clear all pending update timeouts
+            for (const timeout of this.updateTimeouts) {
+                clearTimeout(timeout);
+            }
+            this.updateTimeouts = [];
             this.setState('info.connection', false, true);
             this.log.info('Fujitsu Airstage adapter stopped');
             callback();
