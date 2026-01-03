@@ -111,7 +111,7 @@ Für jedes konfigurierte Gerät werden folgende Datenpunkte erstellt:
     Placeholder for the next version (at the beginning of the line):
     ### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 0.1.1 (2026-01-03)
 * (S. Bott) Fix ioBroker repository checker errors and warnings
 * (S. Bott) Update dependencies (axios, sinon, typescript-eslint, etc.)
 * (S. Bott) Fix setTimeout memory leak

@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "fujitsu-airstage",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "news": {
+      "0.1.1": {
+        "en": "(S. Bott) Fix ioBroker repository checker errors and warnings\n(S. Bott) Update dependencies (axios, sinon, typescript-eslint, etc.)\n(S. Bott) Fix setTimeout memory leak\n(S. Bott) Fix ESLint compatibility with TypeScript ESLint v8",
+        "de": "(S. Bott) Fix ioBroker Repository Checker Fehler und Warnungen\n(S. Bott) Aktualisieren von Abhängigkeiten (axios, sinon, typescript-eslint, etc.)\n(S. Bott) Fix Set Timeout Memory Leck\n(S. Bott) ESLint-Kompatibilität mit TypeScript ESLint v8 beheben",
+        "ru": "(S. Bott) Исправление ошибок и предупреждений проверки репозитория ioBroker\n(С. Ботт) Зависимости обновления (axios, sinon, typescript-eslint и т.д.)\n(С. Ботт) набор исправлений Утечка памяти Timeout\nСовместимость с TypeScript ESLint v8",
+        "pt": "(S. Bott) Corrigir erros e avisos do verificador de repositório ioBroker\n(S. Bott) Atualizar dependências (áxios, sinon, digitação-eslint, etc.)\n(S. Bott) Corrigir o conjunto Vazamento de memória de tempo- limite\n(S. Bott) Corrigir compatibilidade ESLint com TypeScript ESLint v8",
+        "nl": "Fix ioBroker repository checker fouten en waarschuwingen\n(S. Bott) Afhankelijkheden bijwerken (asio's, sinon, typescript-eslint, enz.)\n(S. Bott) Fix set Tijdsuitval geheugenlek\n(S. Bott) Fix ESLint compatibiliteit met TypeScript ESLint v8",
+        "fr": "(S. Bott) Correction des erreurs et des avertissements du vérificateur de dépôt ioBroker\n(S. Bott) Mettre à jour les dépendances (axios, sinon, typographie-essence, etc.)\n(S. Bott) Correction de la série Fuite de mémoire dans le temps\n(S. Bott) Correction de la compatibilité ESLint avec TypeScript ESLint v8",
+        "it": "(S. Bott) Correzione degli errori e degli avvisi del repository ioBroker\n(S. Bott) Dipendenze di aggiornamento (assios, sinon, typescript-eslint, ecc.)\n(S. Bott) Set di fissaggio perdita di memoria timeout\n(S. Bott) Fissa la compatibilità ESLint con TypeScript ESLint v8",
+        "es": "(S. Bott) Corregir errores y advertencias del repositorio ioBroker\n(S. Bott) Actualizar las dependencias (axios, sinon, tiposcript-eslint, etc.)\n(S. Bott) Juego de fijación Temporada de pérdida de memoria\n(S. Bott) Fija la compatibilidad con TypeScript ESLint v8",
+        "pl": "(S. Bott) Naprawiono błędy i ostrzeżenia sprawdzania repozytorium jOBroker\n(S. Bott) Aktualizacja zależności (aksjos, sinon, typescript- eslint itp.)\n(S. Bott) Ustawienie Wyciek pamięci timeout\n(S. Bott) Poprawiono kompatybilność ESLint z TypeScript ESLint v8",
+        "uk": "(S. Bott) Виправлення помилок і попередження ioBroker\n(S. Ботт) Оновлення залежностей (аксіос, синон, тип-еслінт тощо)\n(S. Ботт) Фіксований набір Витік пам'яті\n(S. Bott) Виправлення сумісності з TypeScript ESLint v8",
+        "zh-cn": "(S. Bott) Fix ioBroker 仓库检查器错误和警告\n(S. Bott) (韩语). 更新依赖性( xios, sinon, typescript- eslint 等)\n(S. Bott) (韩语). 设定 超时内存泄漏\n(S. Bott) 修复ESLint与类型Script ESLint v8的兼容性"
+      },
       "0.1.0": {
         "en": "initial release",
         "de": "erstausstrahlung",
