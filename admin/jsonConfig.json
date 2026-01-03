@@ -7,11 +7,21 @@
       "label": "Abfrageintervall (Sekunden)",
       "min": 10,
       "max": 3600,
-      "default": 30
+      "default": 30,
+      "xs": 12,
+      "sm": 12,
+      "md": 6,
+      "lg": 4,
+      "xl": 3
     },
     "devices": {
       "type": "table",
       "label": "Fujitsu Airstage Geräte",
+      "xs": 12,
+      "sm": 12,
+      "md": 12,
+      "lg": 12,
+      "xl": 12,
       "items": [
         {
           "type": "text",

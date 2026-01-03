@@ -112,13 +112,13 @@ Für jedes konfigurierte Gerät werden folgende Datenpunkte erstellt:
     ### **WORK IN PROGRESS**
 -->
 ### 0.1.0 (2025-12-31)
-* (Stefan Bott) initial release
+* (S. Bott) initial release
 
 ## License
 
 MIT License
 
-Copyright (c) 2025 Stefan Bott <stefan5232@gmx.de>
+Copyright (c) 2026 S. Bott <stefan5232@gmx.de>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
