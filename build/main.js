@@ -593,7 +593,7 @@ class FujitsuAirstage extends utils.Adapter {
       this.setState("info.connection", false, true);
       this.log.info("Fujitsu Airstage adapter stopped");
       callback();
-    } catch (e) {
+    } catch {
       callback();
     }
   }
