@@ -100,6 +100,7 @@ class FujitsuAirstage extends utils.Adapter {
       native: deviceConfig
     });
     await this.createStates(deviceId);
+    await this.fetchDeviceModel(deviceObj);
     await this.updateDeviceData(deviceObj);
     this.log.info(`Device ${name} (${deviceId}) initialized`);
   }
@@ -182,7 +183,6 @@ class FujitsuAirstage extends utils.Adapter {
       },
       {
         id: "model",
-        // wird aktuell nicht mit abgerufen
         name: "Device Model",
         type: "string",
         role: "info.name",
@@ -304,6 +304,53 @@ class FujitsuAirstage extends utils.Adapter {
         common,
         native: {}
       });
+    }
+  }
+  /**
+   * Fetch device model separately to avoid API limitation
+   * The Fujitsu API limits the number of parameters that can be queried at once.
+   * Querying iu_model with other parameters causes the API to return only 5 values.
+   * Therefore, we fetch the model in a separate call.
+   *
+   * @param device - The Airstage device to fetch the model for
+   */
+  async fetchDeviceModel(device) {
+    const payload = {
+      device_id: device.deviceId,
+      device_sub_id: 0,
+      req_id: "",
+      modified_by: "",
+      set_level: "03",
+      list: ["iu_model"]
+    };
+    try {
+      const response = await import_axios.default.post(
+        `${device.baseUrl}/GetParam`,
+        payload,
+        {
+          headers: {
+            "Content-Type": "application/json"
+          },
+          timeout: 5e3
+        }
+      );
+      if (response.data && response.data.result === "OK" && response.data.value) {
+        const data = response.data.value;
+        if (data.iu_model !== void 0 && data.iu_model !== null) {
+          await this.setState(
+            `${device.deviceId}.model`,
+            String(data.iu_model),
+            true
+          );
+          this.log.debug(`Device ${device.deviceId} model: ${data.iu_model}`);
+        } else {
+          this.log.debug(`Device ${device.deviceId} model not available`);
+        }
+      }
+    } catch (error) {
+      this.log.debug(
+        `Failed to fetch model for device ${device.deviceId}: ${error instanceof Error ? error.message : String(error)}`
+      );
     }
   }
   async updateDeviceData(device) {
