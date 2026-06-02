@@ -1,5 +1,9 @@
 {
     "fujitsu adapter settings": "Adapter settings for fujitsu",
-    "IP": "IP-Adresse",
-    "MAC": "MAC-Adresse"
+    "IP": "IP Address",
+    "MAC": "MAC Address",
+    "Abfrageintervall (Sekunden)": "Poll interval (seconds)",
+    "Fujitsu Airstage Geräte": "Fujitsu Airstage Devices",
+    "MAC-Adresse ohne Doppelpunkte": "MAC address without colons",
+    "AABBCCDDEEFF": "AABBCCDDEEFF"
 }

@@ -671,7 +671,7 @@ class FujitsuAirstage extends utils.Adapter {
         `Command failed: ${response.data.error || response.data.result}`
       );
     }
-    const timeout = setTimeout(() => this.updateDeviceData(device), 1e3);
+    const timeout = this.setTimeout(() => this.updateDeviceData(device), 1e3);
     this.updateTimeouts.push(timeout);
   }
   mapMode(mode) {
@@ -725,7 +725,7 @@ class FujitsuAirstage extends utils.Adapter {
   }
   startPolling() {
     const interval = (this.typedConfig.pollInterval || 30) * 1e3;
-    this.updateInterval = setInterval(async () => {
+    this.updateInterval = this.setInterval(async () => {
       for (const device of this.devices) {
         await this.updateDeviceData(device);
       }
@@ -741,7 +741,7 @@ class FujitsuAirstage extends utils.Adapter {
         this.updateInterval = null;
       }
       for (const timeout of this.updateTimeouts) {
-        clearTimeout(timeout);
+        if (timeout) this.clearTimeout(timeout);
       }
       this.updateTimeouts = [];
       void this.setState("info.connection", false, true);

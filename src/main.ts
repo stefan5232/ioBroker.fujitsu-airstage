@@ -63,8 +63,8 @@ type VerticalDirection = "highest" | "high" | "low" | "lowest";
 
 class FujitsuAirstage extends utils.Adapter {
   private devices: AirstageDevice[] = [];
-  private updateInterval: NodeJS.Timeout | null = null;
-  private updateTimeouts: NodeJS.Timeout[] = [];
+  private updateInterval: ioBroker.Interval | null | undefined = null;
+  private updateTimeouts: (ioBroker.Timeout | undefined)[] = [];
 
   public constructor(options: Partial<utils.AdapterOptions> = {}) {
     super({
@@ -785,7 +785,7 @@ class FujitsuAirstage extends utils.Adapter {
     }
 
     // Nach Kommando kurz warten und Status aktualisieren
-    const timeout = setTimeout(() => this.updateDeviceData(device), 1000);
+    const timeout = this.setTimeout(() => this.updateDeviceData(device), 1000);
     this.updateTimeouts.push(timeout);
   }
 
@@ -846,7 +846,7 @@ class FujitsuAirstage extends utils.Adapter {
   private startPolling(): void {
     const interval = (this.typedConfig.pollInterval || 30) * 1000;
 
-    this.updateInterval = setInterval(async () => {
+    this.updateInterval = this.setInterval(async () => {
       for (const device of this.devices) {
         await this.updateDeviceData(device);
       }
@@ -865,7 +865,9 @@ class FujitsuAirstage extends utils.Adapter {
       }
       // Clear all pending update timeouts
       for (const timeout of this.updateTimeouts) {
-        clearTimeout(timeout);
+        if (timeout) {
+          this.clearTimeout(timeout);
+        }
       }
       this.updateTimeouts = [];
       void this.setState("info.connection", false, true);

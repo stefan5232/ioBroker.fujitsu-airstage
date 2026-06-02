@@ -12,6 +12,11 @@ updates:
     assignees:
       - "stefan5232"
     versioning-strategy: "increase"
+    cooldown:
+      default: 7
+    ignore:
+      - dependency-name: "@types/node"
+        update-types: ["version-update:semver-major"]
 
   - package-ecosystem: "github-actions"
     directory: "/"

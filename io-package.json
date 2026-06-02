@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "fujitsu-airstage",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "news": {
+      "0.1.2": {
+        "en": "(S. Bott) Resolve all ioBroker repository checker errors, warnings, and suggestions\n(S. Bott) Update Node.js requirement to >= 22\n(S. Bott) Add and configure @iobroker/eslint-config\n(S. Bott) Migrate to ESLint 9 with flat config\n(S. Bott) Remove redundant testing dependencies\n(S. Bott) Fix device model not being fetched (separate API call to avoid parameter limit)",
+        "de": "(S. Bott) Lösen Sie alle ioBroker-Repository-Checker-Fehler, Warnungen und Vorschläge\n(S. Bott) Update Node.js Anforderung an >= 22\n(S. Bott) @iobroker/eslint-config hinzufügen und konfigurieren\n(S. Bott) Migration auf ESLint 9 mit flachem config\n(S. Bott) Entfernen Sie redundante Testabhängigkeiten\n(S. Bott) Fix Gerät Modell nicht gestartet werden (trennen API-Aufruf, um Parameterlimit zu vermeiden)",
+        "ru": "(S. Bott) Устранение всех ошибок, предупреждений и предложений ioBroker\n(S. Bott) Обновить требование Node.js до >= 22\n(S. Bott) Добавить и настроить @iobroker/eslint-config\n(S. Bott) Перейти на ESLint 9 с плоской конфигурацией\n(S. Bott) Удалить избыточные зависимости тестирования\n(С. Ботт) Исправление неисправности модели устройства (отдельный вызов API, чтобы избежать ограничения параметров)",
+        "pt": "(S. Bott) Resolver todos os erros do verificador de repositório ioBroker, avisos e sugestões\n(S. Bott) Exigência de atualização de Node.js para >= 22\n(S. Bott) Adicionar e configurar @iobroker/eslint-config\n(S. Bott) Migrar para ESLint 9 com configuração plana\n(S. Bott) Remover dependências de testes redundantes\n(S. Bott) Não foi obtido o modelo de dispositivo de correção (separar a chamada da API para evitar o limite de parâmetros)",
+        "nl": "(S. Bott) Oplossen van alle ioBroker repository checker fouten, waarschuwingen en suggesties\nVoor de toepassing van de alinea's 1 en 2 wordt verstaan onder:\n(S. Bott) @iobroker/eslint-config toevoegen en configureren\n(S. Bott) Migreren naar ESLint 9 met platte configuratie\n(S. Bott) Verwijder overbodige testen afhankelijkheden\n(S. Bott) Fix apparaatmodel niet opgehaald (aparte API oproep om parameterlimiet te vermijden)",
+        "fr": "(S. Bott) Résoudre toutes les erreurs, les avertissements et les suggestions du vérificateur de dépôt ioBroker\n(S. Bott) Mise à jour Node.js obligatoire à >= 22\n(S. Bott) Ajouter et configurer @iobroker/eslint-config\n(S. Bott) Migrer vers ESLint 9 avec configuration plate\n(S. Bott) Supprimer les dépendances d'essai redondantes\n(S. Bott) Correction du modèle de périphérique non récupéré (séparer l'appel API pour éviter la limite des paramètres)",
+        "it": "(S. Bott) Risolvi tutti gli errori, avvisi e suggerimenti del repository ioBroker\n(S. Bott) Aggiornamento Node.js requisito di >= 22\n(S. Bott) Aggiungi e configura @iobroker/eslint-config\n(S. Bott) Migrare a ESLint 9 con configurazione piatta\n(S. Bott) Rimuovere le dipendenze di test ridondanti\n(S. Bott) Fissare il modello del dispositivo non essere recuperato (separare la chiamata API per evitare il limite dei parametri)",
+        "es": "(S. Bott) Resolver todos los errores, advertencias y sugerencias del repositorio ioBroker\n(S. Bott) Update Node.js requirement to √≥= 22\n(S. Bott) Añadir y configurar @iobroker/eslint-config\n(S. Bott) Migrar a ESLint 9 con config plano\n(S. Bott) Eliminar las dependencias de pruebas redundantes\n(S. Bott) Arreglar el modelo de dispositivo que no se busca (llamada API separada para evitar el límite de parámetro)",
+        "pl": "(S. Bott) Rozwiąż wszystkie błędy sprawdzania repozytorium jOBroker, ostrzeżenia i sugestie\n(S. Bott) Aktualizacja Node.js wymóg > = 22\n(S. Bott) Dodaj i skonfiguruj @ iobroker / eslint- config\n(S. Bott) Migracja do ESLint 9 z konfiguracją płaską\n(S. Bott) Usuń zbędne zależności testowe\n(S. Bott) Nie pobiera się modelu urządzenia (oddzielne wywołanie API, aby uniknąć limitu parametrów)",
+        "uk": "(S. Bott) Вирішити всі помилки репозиторійних перевірок, попередження та пропозиції\nUpdate Node.js Вимоги до >= 22\n(S. Bott) Додати та налаштувати @iobroker/eslint-config\n(S. Bott) Migrate до ESLint 9 з плоским налаштуванням\n(S. Bott) Вилучити зайві залежності тестування\n(S. Ботт) Виправлення моделі пристрою, що не є fetched (роздільний виклик API, щоб уникнути обмеження параметра)",
+        "zh-cn": "(S. Bott) 解决所有 ioBroker 仓库检查器错误、 警告和建议\n(S. Bott) 更新节点js 要求 QQ 22\n(S. Bott) 添加和配置 @iobroster/eslint- config\n(S. Bott) 迁移到ESLint 9,带有平面配置\n(S. Bott) 移除冗余测试依赖性\n(S. Bott) (韩语). 未获取的固定设备模型( 为避免参数限制而单独调用 API)"
+      },
       "0.1.1": {
         "en": "(S. Bott) Fix ioBroker repository checker errors and warnings\n(S. Bott) Update dependencies (axios, sinon, typescript-eslint, etc.)\n(S. Bott) Fix setTimeout memory leak\n(S. Bott) Fix ESLint compatibility with TypeScript ESLint v8",
         "de": "(S. Bott) Fix ioBroker Repository Checker Fehler und Warnungen\n(S. Bott) Aktualisieren von Abhängigkeiten (axios, sinon, typescript-eslint, etc.)\n(S. Bott) Fix Set Timeout Memory Leck\n(S. Bott) ESLint-Kompatibilität mit TypeScript ESLint v8 beheben",
@@ -93,7 +106,7 @@
     ],
     "globalDependencies": [
       {
-        "admin": ">=7.6.17"
+        "admin": ">=7.6.20"
       }
     ]
   },
