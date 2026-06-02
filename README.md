@@ -119,6 +119,15 @@ The following data points are created for each configured device:
     ### **WORK IN PROGRESS**
 -->
 ### **WORK IN PROGRESS**
+* (S. Bott) Resolve all repository checker errors, warnings and suggestions from issue #84
+* (S. Bott) Update Node.js requirement to >=22 and GitHub Actions to Node 24.x
+* (S. Bott) Update @alcalzone/release-script packages to 5.2.0
+* (S. Bott) Update admin dependency to >=7.6.20
+* (S. Bott) Restructure README to English-only (ioBroker requirement)
+* (S. Bott) Add English translations for jsonConfig
+* (S. Bott) Replace setTimeout/setInterval with adapter methods
+* (S. Bott) Configure Dependabot with 7-day cooldown
+* (S. Bott) Update all dependencies to latest versions
 
 ### 0.1.2 (2026-06-02)
 * (S. Bott) Resolve all ioBroker repository checker errors, warnings, and suggestions
