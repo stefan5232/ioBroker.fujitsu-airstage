@@ -119,6 +119,14 @@ The following data points are created for each configured device:
     ### **WORK IN PROGRESS**
 -->
 
+### 0.1.4 (2026-06-14)
+* (S. Bott) Fix all repository checker errors and warnings (issue #86)
+* (S. Bott) Add missing i18n translations for all languages
+* (S. Bott) Add prettier.config.mjs, fix eslint config import
+* (S. Bott) Remove redundant devDependencies (@typescript-eslint/*, eslint)
+* (S. Bott) Upgrade to TypeScript 6 with required tsconfig migrations
+* (S. Bott) Update all dependencies to latest versions
+
 ### 0.1.3 (2026-06-14)
 * (S. Bott) Resolve all repository checker errors, warnings and suggestions from issue #84
 * (S. Bott) Update Node.js requirement to >=22 and GitHub Actions to Node 24.x
