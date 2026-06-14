@@ -1,5 +1,9 @@
 {
     "fujitsu adapter settings": "fujitsu的适配器设置",
     "IP": "IP-Adresse",
-    "MAC": "MAC-Adresse"
+    "MAC": "MAC-Adresse",
+    "Abfrageintervall (Sekunden)": "轮询间隔（秒）",
+    "Fujitsu Airstage Geräte": "Fujitsu Airstage 设备",
+    "MAC-Adresse ohne Doppelpunkte": "不带冒号的MAC地址",
+    "AABBCCDDEEFF": "AABBCCDDEEFF"
 }

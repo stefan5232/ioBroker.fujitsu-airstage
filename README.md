@@ -118,7 +118,8 @@ The following data points are created for each configured device:
     Placeholder for the next version (at the beginning of the line):
     ### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+
+### 0.1.3 (2026-06-14)
 * (S. Bott) Resolve all repository checker errors, warnings and suggestions from issue #84
 * (S. Bott) Update Node.js requirement to >=22 and GitHub Actions to Node 24.x
 * (S. Bott) Update @alcalzone/release-script packages to 5.2.0
@@ -128,14 +129,6 @@ The following data points are created for each configured device:
 * (S. Bott) Replace setTimeout/setInterval with adapter methods
 * (S. Bott) Configure Dependabot with 7-day cooldown
 * (S. Bott) Update all dependencies to latest versions
-
-### 0.1.2 (2026-06-02)
-* (S. Bott) Resolve all ioBroker repository checker errors, warnings, and suggestions
-* (S. Bott) Update Node.js requirement to >= 22
-* (S. Bott) Add and configure @iobroker/eslint-config
-* (S. Bott) Migrate to ESLint 9 with flat config
-* (S. Bott) Remove redundant testing dependencies
-* (S. Bott) Fix device model not being fetched (separate API call to avoid parameter limit)
 
 ### 0.1.1 (2026-01-03)
 * (S. Bott) Fix ioBroker repository checker errors and warnings

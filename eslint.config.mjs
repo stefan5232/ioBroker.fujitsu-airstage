@@ -1,7 +1,7 @@
-import eslintConfig from '@iobroker/eslint-config';
+import config from '@iobroker/eslint-config';
 
 export default [
-    ...eslintConfig,
+    ...config,
     {
         languageOptions: {
             parserOptions: {
