@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "fujitsu-airstage",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "news": {
+      "0.1.5": {
+        "en": "(S. Bott) Fix 'no existing object' warnings when MAC address entered in lowercase\n(S. Bott) Fix typo: info.connected → info.connection",
+        "de": "(S. Bott) Fix 'no existing object'-Warnungen bei Kleinbuchstaben in der MAC-Adresse\n(S. Bott) Tippfehler behoben: info.connected → info.connection",
+        "ru": "(S. Bott) Исправлены предупреждения 'no existing object' при вводе MAC-адреса в нижнем регистре\n(S. Bott) Исправлена опечатка: info.connected → info.connection",
+        "pt": "(S. Bott) Corrigidos avisos 'no existing object' ao inserir endereço MAC em minúsculas\n(S. Bott) Corrigido erro de digitação: info.connected → info.connection",
+        "nl": "(S. Bott) Fix 'no existing object'-waarschuwingen bij kleine letters in MAC-adres\n(S. Bott) Typfout gecorrigeerd: info.connected → info.connection",
+        "fr": "(S. Bott) Correction des avertissements 'no existing object' lors de la saisie de l'adresse MAC en minuscules\n(S. Bott) Correction d'une faute de frappe: info.connected → info.connection",
+        "it": "(S. Bott) Corretti avvisi 'no existing object' quando l'indirizzo MAC è inserito in minuscolo\n(S. Bott) Corretta typo: info.connected → info.connection",
+        "es": "(S. Bott) Corregidas advertencias 'no existing object' al introducir dirección MAC en minúsculas\n(S. Bott) Corregido error tipográfico: info.connected → info.connection",
+        "pl": "(S. Bott) Naprawiono ostrzeżenia 'no existing object' przy wprowadzaniu adresu MAC małymi literami\n(S. Bott) Poprawiono literówkę: info.connected → info.connection",
+        "uk": "(S. Bott) Виправлено попередження 'no existing object' при введенні MAC-адреси у нижньому регістрі\n(S. Bott) Виправлено помилку: info.connected → info.connection",
+        "zh-cn": "(S. Bott) 修复MAC地址小写时出现的'no existing object'警告\n(S. Bott) 修复拼写错误：info.connected → info.connection"
+      },
       "0.1.4": {
         "en": "(S. Bott) Fix all repository checker errors and warnings (issue #86)\n(S. Bott) Add missing i18n translations for all languages\n(S. Bott) Add prettier.config.mjs, fix eslint config import\n(S. Bott) Upgrade to TypeScript 6\n(S. Bott) Update all dependencies to latest versions",
         "de": "(S. Bott) Alle Repository-Checker-Fehler und Warnungen behoben (Issue #86)\n(S. Bott) Fehlende i18n-Übersetzungen für alle Sprachen ergänzt\n(S. Bott) prettier.config.mjs hinzugefügt, eslint-Config-Import korrigiert\n(S. Bott) Upgrade auf TypeScript 6\n(S. Bott) Alle Abhängigkeiten auf neueste Versionen aktualisiert",

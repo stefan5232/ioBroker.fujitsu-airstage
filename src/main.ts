@@ -110,7 +110,7 @@ class FujitsuAirstage extends utils.Adapter {
 
         if (devices.length === 0) {
             this.log.warn('No devices configured');
-            await this.setState('info.connected', false, true);
+            await this.setState('info.connection', false, true);
             return;
         }
 
@@ -151,17 +151,17 @@ class FujitsuAirstage extends utils.Adapter {
 
         this.devices.push(deviceObj);
 
-        // Geräte-Objekte erstellen
-        await this.setObjectNotExistsAsync(deviceId, {
+        // Geräte-Objekte erstellen (immer mit normalisierter uppercase deviceId)
+        await this.setObjectNotExistsAsync(deviceObj.deviceId, {
             type: 'device',
             common: {
-                name: name || `Fujitsu ${deviceId}`,
+                name: name || `Fujitsu ${deviceObj.deviceId}`,
             },
             native: deviceConfig,
         });
 
         // States erstellen
-        await this.createStates(deviceId);
+        await this.createStates(deviceObj.deviceId);
 
         // Fetch device model (separate call to avoid API limitation)
         await this.fetchDeviceModel(deviceObj);

@@ -119,6 +119,10 @@ The following data points are created for each configured device:
     ### **WORK IN PROGRESS**
 -->
 
+### 0.1.5 (2026-06-14)
+* (S. Bott) Fix 'no existing object' warnings when MAC address entered in lowercase
+* (S. Bott) Fix typo: info.connected → info.connection
+
 ### 0.1.4 (2026-06-14)
 * (S. Bott) Fix all repository checker errors and warnings (issue #86)
 * (S. Bott) Add missing i18n translations for all languages
