@@ -119,6 +119,10 @@ The following data points are created for each configured device:
     ### **WORK IN PROGRESS**
 -->
 
+
+### **WORK IN PROGRESS**
+- (ioBroker-Bot) Adapter requires admin >= 7.8.23 now.
+
 ### 0.1.5 (2026-06-14)
 * (S. Bott) Fix 'no existing object' warnings when MAC address entered in lowercase
 * (S. Bott) Fix typo: info.connected → info.connection
