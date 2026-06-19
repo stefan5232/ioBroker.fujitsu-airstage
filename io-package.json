@@ -1,8 +1,12 @@
 {
   "common": {
     "name": "fujitsu-airstage",
-    "version": "0.1.6",
+    "version": "0.1.7",
     "news": {
+      "0.1.7": {
+        "en": "(S. Bott) Fix installation from GitHub: commit build output to repository",
+        "de": "(S. Bott) Installation von GitHub repariert: Build-Ausgabe wieder im Repository"
+      },
       "0.1.6": {
         "en": "(S. Bott) Fix human_detection_auto_save: set write=true to match role switch\n(S. Bott) Fix repository checker errors (E0036, E5019)",
         "de": "(S. Bott) human_detection_auto_save: write=true gesetzt passend zur Rolle switch\n(S. Bott) Repository-Checker-Fehler behoben (E0036, E5019)"

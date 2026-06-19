@@ -119,6 +119,9 @@ The following data points are created for each configured device:
     ### **WORK IN PROGRESS**
 -->
 
+### 0.1.7 (2026-06-20)
+* (S. Bott) Fix installation from GitHub: commit build output to repository
+
 ### 0.1.6 (2026-06-19)
 * (S. Bott) Fix human_detection_auto_save: set write=true to match role switch
 * (S. Bott) Fix repository checker errors (E0036, E5019)
