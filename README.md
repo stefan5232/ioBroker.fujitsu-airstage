@@ -119,6 +119,10 @@ The following data points are created for each configured device:
     ### **WORK IN PROGRESS**
 -->
 
+### 0.1.6 (2026-06-19)
+* (S. Bott) Fix human_detection_auto_save: set write=true to match role switch
+* (S. Bott) Fix repository checker errors (E0036, E5019)
+
 ### 0.1.5 (2026-06-14)
 * (S. Bott) Fix 'no existing object' warnings when MAC address entered in lowercase
 * (S. Bott) Fix typo: info.connected → info.connection

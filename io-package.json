@@ -1,72 +1,31 @@
 {
   "common": {
     "name": "fujitsu-airstage",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "news": {
+      "0.1.6": {
+        "en": "(S. Bott) Fix human_detection_auto_save: set write=true to match role switch\n(S. Bott) Fix repository checker errors (E0036, E5019)",
+        "de": "(S. Bott) human_detection_auto_save: write=true gesetzt passend zur Rolle switch\n(S. Bott) Repository-Checker-Fehler behoben (E0036, E5019)"
+      },
       "0.1.5": {
         "en": "(S. Bott) Fix 'no existing object' warnings when MAC address entered in lowercase\n(S. Bott) Fix typo: info.connected → info.connection",
-        "de": "(S. Bott) Fix 'no existing object'-Warnungen bei Kleinbuchstaben in der MAC-Adresse\n(S. Bott) Tippfehler behoben: info.connected → info.connection",
-        "ru": "(S. Bott) Исправлены предупреждения 'no existing object' при вводе MAC-адреса в нижнем регистре\n(S. Bott) Исправлена опечатка: info.connected → info.connection",
-        "pt": "(S. Bott) Corrigidos avisos 'no existing object' ao inserir endereço MAC em minúsculas\n(S. Bott) Corrigido erro de digitação: info.connected → info.connection",
-        "nl": "(S. Bott) Fix 'no existing object'-waarschuwingen bij kleine letters in MAC-adres\n(S. Bott) Typfout gecorrigeerd: info.connected → info.connection",
-        "fr": "(S. Bott) Correction des avertissements 'no existing object' lors de la saisie de l'adresse MAC en minuscules\n(S. Bott) Correction d'une faute de frappe: info.connected → info.connection",
-        "it": "(S. Bott) Corretti avvisi 'no existing object' quando l'indirizzo MAC è inserito in minuscolo\n(S. Bott) Corretta typo: info.connected → info.connection",
-        "es": "(S. Bott) Corregidas advertencias 'no existing object' al introducir dirección MAC en minúsculas\n(S. Bott) Corregido error tipográfico: info.connected → info.connection",
-        "pl": "(S. Bott) Naprawiono ostrzeżenia 'no existing object' przy wprowadzaniu adresu MAC małymi literami\n(S. Bott) Poprawiono literówkę: info.connected → info.connection",
-        "uk": "(S. Bott) Виправлено попередження 'no existing object' при введенні MAC-адреси у нижньому регістрі\n(S. Bott) Виправлено помилку: info.connected → info.connection",
-        "zh-cn": "(S. Bott) 修复MAC地址小写时出现的'no existing object'警告\n(S. Bott) 修复拼写错误：info.connected → info.connection"
+        "de": "(S. Bott) 'no existing object'-Warnungen bei Kleinschreibung der MAC-Adresse behoben\n(S. Bott) Tippfehler behoben: info.connected → info.connection"
       },
       "0.1.4": {
         "en": "(S. Bott) Fix all repository checker errors and warnings (issue #86)\n(S. Bott) Add missing i18n translations for all languages\n(S. Bott) Add prettier.config.mjs, fix eslint config import\n(S. Bott) Upgrade to TypeScript 6\n(S. Bott) Update all dependencies to latest versions",
-        "de": "(S. Bott) Alle Repository-Checker-Fehler und Warnungen behoben (Issue #86)\n(S. Bott) Fehlende i18n-Übersetzungen für alle Sprachen ergänzt\n(S. Bott) prettier.config.mjs hinzugefügt, eslint-Config-Import korrigiert\n(S. Bott) Upgrade auf TypeScript 6\n(S. Bott) Alle Abhängigkeiten auf neueste Versionen aktualisiert",
-        "ru": "(S. Bott) Исправлены все ошибки и предупреждения проверки репозитория (Issue #86)\n(S. Bott) Добавлены отсутствующие переводы i18n для всех языков\n(S. Bott) Добавлен prettier.config.mjs, исправлен импорт конфигурации eslint\n(S. Bott) Обновление до TypeScript 6\n(S. Bott) Все зависимости обновлены до последних версий",
-        "pt": "(S. Bott) Corrigidos todos os erros e avisos do verificador de repositório (Issue #86)\n(S. Bott) Adicionadas traduções i18n ausentes para todos os idiomas\n(S. Bott) Adicionado prettier.config.mjs, corrigida importação de configuração eslint\n(S. Bott) Atualização para TypeScript 6\n(S. Bott) Todas as dependências atualizadas para as versões mais recentes",
-        "nl": "(S. Bott) Alle repository checker fouten en waarschuwingen opgelost (Issue #86)\n(S. Bott) Ontbrekende i18n-vertalingen voor alle talen toegevoegd\n(S. Bott) prettier.config.mjs toegevoegd, eslint config import gecorrigeerd\n(S. Bott) Upgrade naar TypeScript 6\n(S. Bott) Alle afhankelijkheden bijgewerkt naar nieuwste versies",
-        "fr": "(S. Bott) Correction de toutes les erreurs et avertissements du vérificateur de dépôt (Issue #86)\n(S. Bott) Ajout des traductions i18n manquantes pour toutes les langues\n(S. Bott) Ajout de prettier.config.mjs, correction de l'import de configuration eslint\n(S. Bott) Mise à niveau vers TypeScript 6\n(S. Bott) Toutes les dépendances mises à jour vers les dernières versions",
-        "it": "(S. Bott) Corretti tutti gli errori e avvisi del repository checker (Issue #86)\n(S. Bott) Aggiunte le traduzioni i18n mancanti per tutte le lingue\n(S. Bott) Aggiunto prettier.config.mjs, corretto l'import della configurazione eslint\n(S. Bott) Aggiornamento a TypeScript 6\n(S. Bott) Tutte le dipendenze aggiornate alle versioni più recenti",
-        "es": "(S. Bott) Corregidos todos los errores y advertencias del comprobador de repositorio (Issue #86)\n(S. Bott) Añadidas traducciones i18n faltantes para todos los idiomas\n(S. Bott) Añadido prettier.config.mjs, corregida importación de configuración eslint\n(S. Bott) Actualización a TypeScript 6\n(S. Bott) Todas las dependencias actualizadas a las últimas versiones",
-        "pl": "(S. Bott) Naprawiono wszystkie błędy i ostrzeżenia sprawdzania repozytorium (Issue #86)\n(S. Bott) Dodano brakujące tłumaczenia i18n dla wszystkich języków\n(S. Bott) Dodano prettier.config.mjs, poprawiono import konfiguracji eslint\n(S. Bott) Aktualizacja do TypeScript 6\n(S. Bott) Wszystkie zależności zaktualizowane do najnowszych wersji",
-        "uk": "(S. Bott) Виправлено всі помилки та попередження перевірки репозиторію (Issue #86)\n(S. Bott) Додано відсутні переклади i18n для всіх мов\n(S. Bott) Додано prettier.config.mjs, виправлено імпорт конфігурації eslint\n(S. Bott) Оновлення до TypeScript 6\n(S. Bott) Всі залежності оновлено до останніх версій",
-        "zh-cn": "(S. Bott) 修复所有存储库检查器错误和警告（Issue #86）\n(S. Bott) 为所有语言添加缺失的i18n翻译\n(S. Bott) 添加prettier.config.mjs，修复eslint配置导入\n(S. Bott) 升级到TypeScript 6\n(S. Bott) 所有依赖项更新至最新版本"
+        "de": "(S. Bott) Alle Repository-Checker-Fehler und Warnungen behoben (Issue #86)\n(S. Bott) Fehlende i18n-Übersetzungen für alle Sprachen ergänzt\n(S. Bott) prettier.config.mjs hinzugefügt, eslint-Config-Import korrigiert\n(S. Bott) Upgrade auf TypeScript 6\n(S. Bott) Alle Abhängigkeiten auf neueste Versionen aktualisiert"
       },
       "0.1.3": {
         "en": "(S. Bott) Resolve all ioBroker repository checker errors, warnings, and suggestions\n(S. Bott) Update Node.js requirement to >=22 and GitHub Actions to Node 24.x\n(S. Bott) Migrate to ESLint 9 flat config with @iobroker/eslint-config\n(S. Bott) Replace setTimeout/setInterval with adapter methods\n(S. Bott) Update all dependencies to latest versions",
-        "de": "(S. Bott) Alle ioBroker Repository-Checker-Fehler, Warnungen und Vorschläge behoben\n(S. Bott) Node.js-Anforderung auf >=22 und GitHub Actions auf Node 24.x aktualisiert\n(S. Bott) Migration auf ESLint 9 Flat Config mit @iobroker/eslint-config\n(S. Bott) setTimeout/setInterval durch Adapter-Methoden ersetzt\n(S. Bott) Alle Abhängigkeiten auf neueste Versionen aktualisiert",
-        "ru": "(S. Bott) Устранены все ошибки, предупреждения и предложения проверки репозитория ioBroker\n(S. Bott) Требование Node.js обновлено до >=22, GitHub Actions — до Node 24.x\n(S. Bott) Миграция на ESLint 9 flat config с @iobroker/eslint-config\n(S. Bott) setTimeout/setInterval заменены методами адаптера\n(S. Bott) Все зависимости обновлены до последних версий",
-        "pt": "(S. Bott) Resolver todos os erros, avisos e sugestões do verificador de repositório ioBroker\n(S. Bott) Requisito Node.js atualizado para >=22 e GitHub Actions para Node 24.x\n(S. Bott) Migração para ESLint 9 flat config com @iobroker/eslint-config\n(S. Bott) setTimeout/setInterval substituídos por métodos do adaptador\n(S. Bott) Todas as dependências atualizadas para as versões mais recentes",
-        "nl": "(S. Bott) Alle ioBroker repository checker fouten, waarschuwingen en suggesties opgelost\n(S. Bott) Node.js-vereiste bijgewerkt naar >=22 en GitHub Actions naar Node 24.x\n(S. Bott) Migratie naar ESLint 9 flat config met @iobroker/eslint-config\n(S. Bott) setTimeout/setInterval vervangen door adaptermethoden\n(S. Bott) Alle afhankelijkheden bijgewerkt naar nieuwste versies",
-        "fr": "(S. Bott) Résoudre toutes les erreurs, avertissements et suggestions du vérificateur de dépôt ioBroker\n(S. Bott) Mise à jour de Node.js vers >=22 et GitHub Actions vers Node 24.x\n(S. Bott) Migration vers ESLint 9 flat config avec @iobroker/eslint-config\n(S. Bott) setTimeout/setInterval remplacés par des méthodes d'adaptateur\n(S. Bott) Toutes les dépendances mises à jour vers les dernières versions",
-        "it": "(S. Bott) Risolti tutti gli errori, avvisi e suggerimenti del repository checker ioBroker\n(S. Bott) Requisito Node.js aggiornato a >=22 e GitHub Actions a Node 24.x\n(S. Bott) Migrazione a ESLint 9 flat config con @iobroker/eslint-config\n(S. Bott) setTimeout/setInterval sostituiti con metodi dell'adattatore\n(S. Bott) Tutte le dipendenze aggiornate alle versioni più recenti",
-        "es": "(S. Bott) Resolver todos los errores, advertencias y sugerencias del comprobador de repositorio ioBroker\n(S. Bott) Requisito Node.js actualizado a >=22 y GitHub Actions a Node 24.x\n(S. Bott) Migración a ESLint 9 flat config con @iobroker/eslint-config\n(S. Bott) setTimeout/setInterval reemplazados por métodos del adaptador\n(S. Bott) Todas las dependencias actualizadas a las últimas versiones",
-        "pl": "(S. Bott) Rozwiązano wszystkie błędy, ostrzeżenia i sugestie sprawdzania repozytorium ioBroker\n(S. Bott) Wymaganie Node.js zaktualizowane do >=22, GitHub Actions do Node 24.x\n(S. Bott) Migracja do ESLint 9 flat config z @iobroker/eslint-config\n(S. Bott) setTimeout/setInterval zastąpione metodami adaptera\n(S. Bott) Wszystkie zależności zaktualizowane do najnowszych wersji",
-        "uk": "(S. Bott) Вирішено всі помилки, попередження та пропозиції перевірки репозиторію ioBroker\n(S. Bott) Вимогу Node.js оновлено до >=22, GitHub Actions — до Node 24.x\n(S. Bott) Міграція на ESLint 9 flat config з @iobroker/eslint-config\n(S. Bott) setTimeout/setInterval замінено методами адаптера\n(S. Bott) Всі залежності оновлено до останніх версій",
-        "zh-cn": "(S. Bott) 解决所有ioBroker存储库检查器错误、警告和建议\n(S. Bott) Node.js要求更新至>=22，GitHub Actions更新至Node 24.x\n(S. Bott) 迁移至ESLint 9 flat config，使用@iobroker/eslint-config\n(S. Bott) 将setTimeout/setInterval替换为适配器方法\n(S. Bott) 所有依赖项更新至最新版本"
+        "de": "(S. Bott) Alle ioBroker Repository-Checker-Fehler, Warnungen und Vorschläge behoben\n(S. Bott) Node.js-Anforderung auf >=22 und GitHub Actions auf Node 24.x aktualisiert\n(S. Bott) Migration auf ESLint 9 Flat Config mit @iobroker/eslint-config\n(S. Bott) setTimeout/setInterval durch Adapter-Methoden ersetzt\n(S. Bott) Alle Abhängigkeiten auf neueste Versionen aktualisiert"
       },
       "0.1.1": {
         "en": "(S. Bott) Fix ioBroker repository checker errors and warnings\n(S. Bott) Update dependencies (axios, sinon, typescript-eslint, etc.)\n(S. Bott) Fix setTimeout memory leak\n(S. Bott) Fix ESLint compatibility with TypeScript ESLint v8",
-        "de": "(S. Bott) Fix ioBroker Repository Checker Fehler und Warnungen\n(S. Bott) Aktualisieren von Abhängigkeiten (axios, sinon, typescript-eslint, etc.)\n(S. Bott) Fix Set Timeout Memory Leck\n(S. Bott) ESLint-Kompatibilität mit TypeScript ESLint v8 beheben",
-        "ru": "(S. Bott) Исправление ошибок и предупреждений проверки репозитория ioBroker\n(С. Ботт) Зависимости обновления (axios, sinon, typescript-eslint и т.д.)\n(С. Ботт) набор исправлений Утечка памяти Timeout\nСовместимость с TypeScript ESLint v8",
-        "pt": "(S. Bott) Corrigir erros e avisos do verificador de repositório ioBroker\n(S. Bott) Atualizar dependências (áxios, sinon, digitação-eslint, etc.)\n(S. Bott) Corrigir o conjunto Vazamento de memória de tempo- limite\n(S. Bott) Corrigir compatibilidade ESLint com TypeScript ESLint v8",
-        "nl": "Fix ioBroker repository checker fouten en waarschuwingen\n(S. Bott) Afhankelijkheden bijwerken (asio's, sinon, typescript-eslint, enz.)\n(S. Bott) Fix set Tijdsuitval geheugenlek\n(S. Bott) Fix ESLint compatibiliteit met TypeScript ESLint v8",
-        "fr": "(S. Bott) Correction des erreurs et des avertissements du vérificateur de dépôt ioBroker\n(S. Bott) Mettre à jour les dépendances (axios, sinon, typographie-essence, etc.)\n(S. Bott) Correction de la série Fuite de mémoire dans le temps\n(S. Bott) Correction de la compatibilité ESLint avec TypeScript ESLint v8",
-        "it": "(S. Bott) Correzione degli errori e degli avvisi del repository ioBroker\n(S. Bott) Dipendenze di aggiornamento (assios, sinon, typescript-eslint, ecc.)\n(S. Bott) Set di fissaggio perdita di memoria timeout\n(S. Bott) Fissa la compatibilità ESLint con TypeScript ESLint v8",
-        "es": "(S. Bott) Corregir errores y advertencias del repositorio ioBroker\n(S. Bott) Actualizar las dependencias (axios, sinon, tiposcript-eslint, etc.)\n(S. Bott) Juego de fijación Temporada de pérdida de memoria\n(S. Bott) Fija la compatibilidad con TypeScript ESLint v8",
-        "pl": "(S. Bott) Naprawiono błędy i ostrzeżenia sprawdzania repozytorium jOBroker\n(S. Bott) Aktualizacja zależności (aksjos, sinon, typescript- eslint itp.)\n(S. Bott) Ustawienie Wyciek pamięci timeout\n(S. Bott) Poprawiono kompatybilność ESLint z TypeScript ESLint v8",
-        "uk": "(S. Bott) Виправлення помилок і попередження ioBroker\n(S. Ботт) Оновлення залежностей (аксіос, синон, тип-еслінт тощо)\n(S. Ботт) Фіксований набір Витік пам'яті\n(S. Bott) Виправлення сумісності з TypeScript ESLint v8",
-        "zh-cn": "(S. Bott) Fix ioBroker 仓库检查器错误和警告\n(S. Bott) (韩语). 更新依赖性( xios, sinon, typescript- eslint 等)\n(S. Bott) (韩语). 设定 超时内存泄漏\n(S. Bott) 修复ESLint与类型Script ESLint v8的兼容性"
+        "de": "(S. Bott) ioBroker Repository-Checker-Fehler und Warnungen behoben\n(S. Bott) Abhängigkeiten aktualisiert (axios, sinon, typescript-eslint, etc.)\n(S. Bott) setTimeout-Speicherleck behoben\n(S. Bott) ESLint-Kompatibilität mit TypeScript ESLint v8 behoben"
       },
       "0.1.0": {
         "en": "initial release",
-        "de": "erstausstrahlung",
-        "ru": "первоначальное освобождение",
-        "pt": "libertação inicial",
-        "nl": "eerste release",
-        "fr": "libération initiale",
-        "it": "rilascio iniziale",
-        "es": "liberación inicial",
-        "pl": "początkowe zwolnienie",
-        "uk": "початковий реліз",
-        "zh-cn": "初步释放"
+        "de": "Erstveröffentlichung"
       }
     },
     "titleLang": {
@@ -120,6 +79,7 @@
     "mode": "daemon",
     "type": "climate-control",
     "compact": true,
+    "noGit": true,
     "connectionType": "local",
     "dataSource": "poll",
     "adminUI": {

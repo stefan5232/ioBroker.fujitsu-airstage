@@ -324,7 +324,7 @@ class FujitsuAirstage extends utils.Adapter {
                 name: 'Human Detection Auto Save',
                 type: 'boolean' as const,
                 role: 'switch',
-                write: false,
+                write: true,
             },
             {
                 id: 'outdoor_low_noise',
