@@ -158,6 +158,8 @@ The following data points are created for each configured device:
 ### 0.1.0 (2025-12-31)
 * (S. Bott) initial release
 
+[Older changelogs can be found there](CHANGELOG_OLD.md)
+
 ## License
 
 MIT License
