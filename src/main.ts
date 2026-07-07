@@ -368,7 +368,7 @@ class FujitsuAirstage extends utils.Adapter {
                 ...(state.states && { states: state.states }),
             };
 
-            await this.setObjectNotExistsAsync(`${deviceId}.${state.id}`, {
+            await this.setObject(`${deviceId}.${state.id}`, {
                 type: 'state',
                 common,
                 native: {},

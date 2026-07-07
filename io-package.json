@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "fujitsu-airstage",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "news": {
+      "0.2.2": {
+        "en": "(S. Bott) Fix vertical_direction write flag not applied on existing installations",
+        "de": "(S. Bott) vertical_direction: Schreibflag wird nun auch bei bestehenden Installationen aktualisiert",
+        "ru": "(S. Bott) Исправлено обновление флага записи vertical_direction на существующих установках",
+        "pt": "(S. Bott) Correção do flag de escrita vertical_direction em instalações existentes",
+        "nl": "(S. Bott) vertical_direction schrijfvlag nu ook bijgewerkt bij bestaande installaties",
+        "fr": "(S. Bott) Correction du flag d'écriture vertical_direction pour les installations existantes",
+        "it": "(S. Bott) Corretta applicazione del flag di scrittura vertical_direction su installazioni esistenti",
+        "es": "(S. Bott) Corrección del flag de escritura vertical_direction en instalaciones existentes",
+        "pl": "(S. Bott) Naprawa flagi zapisu vertical_direction dla istniejących instalacji",
+        "uk": "(S. Bott) Виправлено оновлення прапора запису vertical_direction на існуючих установках",
+        "zh-cn": "(S. Bott) 修复vertical_direction写标志在现有安装上未生效的问题"
+      },
       "0.2.1": {
         "en": "(S. Bott) Fix vertical_direction: make writable to set fixed vane position",
         "de": "(S. Bott) vertical_direction: schreibbar gemacht für feste Lamellenposition",

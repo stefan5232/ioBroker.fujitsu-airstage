@@ -119,6 +119,9 @@ The following data points are created for each configured device:
     ### **WORK IN PROGRESS**
 -->
 
+### 0.2.2 (2026-07-07)
+* (S. Bott) Fix vertical_direction write flag not applied on existing installations
+
 ### 0.2.1 (2026-07-07)
 * (S. Bott) Fix vertical_direction: make writable to set fixed vane position
 
