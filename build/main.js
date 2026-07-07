@@ -36,7 +36,6 @@ class FujitsuAirstage extends utils.Adapter {
     this.on("stateChange", this.onStateChange.bind(this));
     this.on("unload", this.onUnload.bind(this));
   }
-  // Getter für typisierte Konfiguration
   get typedConfig() {
     return this.config;
   }
@@ -52,7 +51,7 @@ class FujitsuAirstage extends utils.Adapter {
     await this.setObjectNotExistsAsync("info.connection", {
       type: "state",
       common: {
-        name: " Device or service connected",
+        name: "Device or service connected",
         type: "boolean",
         role: "indicator.connected",
         read: true,
@@ -230,10 +229,10 @@ class FujitsuAirstage extends utils.Adapter {
         states: {
           highest: "Highest",
           high: "High",
-          low: "low",
-          lowest: "lowest"
+          low: "Low",
+          lowest: "Lowest"
         },
-        write: false
+        write: true
       },
       {
         id: "horizontal_direction",
@@ -352,7 +351,6 @@ class FujitsuAirstage extends utils.Adapter {
       modified_by: "",
       set_level: "03",
       list: [
-        //'iu_model',
         "iu_onoff",
         "iu_op_mode",
         "iu_fan_spd",
@@ -600,6 +598,14 @@ class FujitsuAirstage extends utils.Adapter {
         paramName = "iu_min_heat";
         paramValue = value ? 1 : 0;
         break;
+      case "vertical_direction":
+        paramName = "iu_af_dir_vrt";
+        paramValue = this.mapVerticalDirectionReverse(String(value));
+        break;
+      case "human_detection_auto_save":
+        paramName = "iu_hmn_det_auto_save";
+        paramValue = value ? 1 : 0;
+        break;
       default:
         throw new Error(`Unknown command: ${command}`);
     }
@@ -664,17 +670,27 @@ class FujitsuAirstage extends utils.Adapter {
     };
     return speeds[speed] || 0;
   }
+  mapVerticalDirectionReverse(direction) {
+    const directions = {
+      highest: 1,
+      high: 2,
+      low: 3,
+      lowest: 4
+    };
+    return directions[direction] || 1;
+  }
   mapVerticalDirection(direction) {
     const directions = {
       1: "highest",
       2: "high",
-      3: "lowest",
-      4: "low"
+      3: "low",
+      4: "lowest"
     };
     return directions[direction] || "highest";
   }
   startPolling() {
-    const interval = (this.typedConfig.pollInterval || 30) * 1e3;
+    const rawInterval = this.typedConfig.pollInterval || 30;
+    const interval = Math.max(10, Math.min(3600, rawInterval)) * 1e3;
     this.updateInterval = this.setInterval(async () => {
       for (const device of this.devices) {
         await this.updateDeviceData(device);

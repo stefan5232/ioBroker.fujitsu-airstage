@@ -302,7 +302,7 @@ class FujitsuAirstage extends utils.Adapter {
                     low: 'Low',
                     lowest: 'Lowest',
                 },
-                write: false,
+                write: true,
             },
             {
                 id: 'horizontal_direction',
@@ -686,6 +686,10 @@ class FujitsuAirstage extends utils.Adapter {
                 paramName = 'iu_min_heat';
                 paramValue = value ? 1 : 0;
                 break;
+            case 'vertical_direction':
+                paramName = 'iu_af_dir_vrt';
+                paramValue = this.mapVerticalDirectionReverse(String(value) as VerticalDirection);
+                break;
             case 'human_detection_auto_save':
                 paramName = 'iu_hmn_det_auto_save';
                 paramValue = value ? 1 : 0;
@@ -763,6 +767,16 @@ class FujitsuAirstage extends utils.Adapter {
             high: 4,
         };
         return speeds[speed] || 0;
+    }
+
+    private mapVerticalDirectionReverse(direction: VerticalDirection): number {
+        const directions: Record<VerticalDirection, number> = {
+            highest: 1,
+            high: 2,
+            low: 3,
+            lowest: 4,
+        };
+        return directions[direction] || 1;
     }
 
     private mapVerticalDirection(direction: number): VerticalDirection {

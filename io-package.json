@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "fujitsu-airstage",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "news": {
+      "0.2.1": {
+        "en": "(S. Bott) Fix vertical_direction: make writable to set fixed vane position",
+        "de": "(S. Bott) vertical_direction: schreibbar gemacht für feste Lamellenposition",
+        "ru": "(S. Bott) Исправлено vertical_direction: теперь доступно для записи",
+        "pt": "(S. Bott) Correção de vertical_direction: tornado gravável para posição fixa",
+        "nl": "(S. Bott) vertical_direction: schrijfbaar gemaakt voor vaste lamelpositie",
+        "fr": "(S. Bott) Correction de vertical_direction: rendu modifiable pour position fixe",
+        "it": "(S. Bott) Corretta vertical_direction: resa scrivibile per posizione fissa",
+        "es": "(S. Bott) Corrección de vertical_direction: escribible para posición fija",
+        "pl": "(S. Bott) Naprawa vertical_direction: umożliwiono zapis stałej pozycji",
+        "uk": "(S. Bott) Виправлено vertical_direction: тепер доступне для запису",
+        "zh-cn": "(S. Bott) 修复vertical_direction: 设为可写以设置固定叶片位置"
+      },
       "0.2.0": {
         "en": "(S. Bott) Fix PR review findings: sendCommand, pollInterval, i18n, metadata\n(S. Bott) Update dependencies, raise admin requirement to >=7.8.23",
         "de": "(S. Bott) PR-Review-Befunde behoben: sendCommand, pollInterval, i18n, Metadaten\n(S. Bott) Abhängigkeiten aktualisiert, admin-Anforderung auf >=7.8.23 erhöht",

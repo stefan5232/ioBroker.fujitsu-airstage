@@ -119,6 +119,9 @@ The following data points are created for each configured device:
     ### **WORK IN PROGRESS**
 -->
 
+### 0.2.1 (2026-07-07)
+* (S. Bott) Fix vertical_direction: make writable to set fixed vane position
+
 ### 0.2.0 (2026-07-07)
 * (S. Bott) Fix PR review findings: sendCommand, pollInterval validation, i18n, metadata
 * (S. Bott) Add news translations for all ioBroker languages
