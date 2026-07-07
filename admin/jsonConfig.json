@@ -28,12 +28,12 @@
           "attr": "name",
           "title": "Name",
           "width": "25%",
-          "default": "Klimaanlage"
+          "default": "Air Conditioner"
         },
         {
           "type": "text", 
           "attr": "ip",
-          "title": "IP-Adresse",
+          "title": "IP",
           "width": "35%",
           "placeholder": "192.168.1.100"
         },

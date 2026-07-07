@@ -119,6 +119,11 @@ The following data points are created for each configured device:
     ### **WORK IN PROGRESS**
 -->
 
+### 0.2.0 (2026-07-07)
+* (S. Bott) Fix PR review findings: sendCommand, pollInterval validation, i18n, metadata
+* (S. Bott) Add news translations for all ioBroker languages
+* (S. Bott) Update dependencies, raise admin requirement to >=7.8.23
+
 ### 0.1.7 (2026-06-20)
 * (S. Bott) Fix installation from GitHub: commit build output to repository
 

@@ -77,7 +77,6 @@ class FujitsuAirstage extends utils.Adapter {
         this.on('unload', this.onUnload.bind(this));
     }
 
-    // Getter für typisierte Konfiguration
     private get typedConfig(): AdapterConfig {
         return this.config as AdapterConfig;
     }
@@ -96,7 +95,7 @@ class FujitsuAirstage extends utils.Adapter {
         await this.setObjectNotExistsAsync('info.connection', {
             type: 'state',
             common: {
-                name: ' Device or service connected',
+                name: 'Device or service connected',
                 type: 'boolean',
                 role: 'indicator.connected',
                 read: true,
@@ -300,8 +299,8 @@ class FujitsuAirstage extends utils.Adapter {
                 states: {
                     highest: 'Highest',
                     high: 'High',
-                    low: 'low',
-                    lowest: 'lowest',
+                    low: 'Low',
+                    lowest: 'Lowest',
                 },
                 write: false,
             },
@@ -429,7 +428,6 @@ class FujitsuAirstage extends utils.Adapter {
             modified_by: '',
             set_level: '03',
             list: [
-                //'iu_model',
                 'iu_onoff',
                 'iu_op_mode',
                 'iu_fan_spd',
@@ -467,10 +465,6 @@ class FujitsuAirstage extends utils.Adapter {
                 // Device als online markieren
                 await this.setState(`${device.deviceId}.online`, true, true);
 
-                // States aktualisieren mit den neuen Werten
-                /*if (data.iu_model !== undefined) {
-                    await this.setState(`${device.deviceId}.model`, data.iu_model, true);
-                }*/
                 if (data.iu_onoff !== undefined) {
                     await this.setState(`${device.deviceId}.power`, parseInt(String(data.iu_onoff)) === 1, true);
                 }
@@ -587,7 +581,6 @@ class FujitsuAirstage extends utils.Adapter {
                 if (data.iu_min_heat !== undefined) {
                     await this.setState(`${device.deviceId}.min_heat`, parseInt(String(data.iu_min_heat)) === 1, true);
                 }
-                //this.log.debug(`Updated data for device ${device.name}: Power=${data.iu_onoff}, Temp=${data.iu_set_tmp}°C`);
             } else {
                 this.log.warn(
                     `No data received from device ${device.name} or error code: ${response.data?.error || response.data?.result}`,
@@ -693,6 +686,10 @@ class FujitsuAirstage extends utils.Adapter {
                 paramName = 'iu_min_heat';
                 paramValue = value ? 1 : 0;
                 break;
+            case 'human_detection_auto_save':
+                paramName = 'iu_hmn_det_auto_save';
+                paramValue = value ? 1 : 0;
+                break;
             default:
                 throw new Error(`Unknown command: ${command}`);
         }
@@ -772,14 +769,15 @@ class FujitsuAirstage extends utils.Adapter {
         const directions: Record<number, VerticalDirection> = {
             1: 'highest',
             2: 'high',
-            3: 'lowest',
-            4: 'low',
+            3: 'low',
+            4: 'lowest',
         };
         return directions[direction] || 'highest';
     }
 
     private startPolling(): void {
-        const interval = (this.typedConfig.pollInterval || 30) * 1000;
+        const rawInterval = this.typedConfig.pollInterval || 30;
+        const interval = Math.max(10, Math.min(3600, rawInterval)) * 1000;
 
         this.updateInterval = this.setInterval(async () => {
             for (const device of this.devices) {
