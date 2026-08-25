@@ -4,7 +4,7 @@
   "items": {
     "pollInterval": {
       "type": "number",
-      "label": "Abfrageintervall (Sekunden)",
+      "label": "Poll interval (seconds)",
       "min": 10,
       "max": 3600,
       "default": 30,
@@ -16,7 +16,7 @@
     },
     "devices": {
       "type": "table",
-      "label": "Fujitsu Airstage Geräte",
+      "label": "Fujitsu Airstage Devices",
       "xs": 12,
       "sm": 12,
       "md": 12,
@@ -43,7 +43,7 @@
           "title": "Device ID",
           "width": "40%",
           "placeholder": "AABBCCDDEEFF",
-          "help": "MAC-Adresse ohne Doppelpunkte"
+          "help": "MAC address without colons"
         }
       ]
     }

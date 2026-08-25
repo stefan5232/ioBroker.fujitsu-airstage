@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "fujitsu-airstage",
-    "version": "0.2.2",
+    "version": "0.2.3",
     "news": {
+      "0.2.3": {
+        "en": "(S. Bott) Fix PR review findings: preserve custom object settings on restart, avoid overlapping polling calls, correct state roles, clean up i18n",
+        "de": "(S. Bott) PR-Review-Befunde behoben: Objekteinstellungen bleiben bei Neustart erhalten, keine ueberlappenden Abfragen mehr, State-Rollen korrigiert, i18n bereinigt",
+        "ru": "(S. Bott) Исправлены замечания PR-ревью: сохранение пользовательских настроек объектов при перезапуске, устранено перекрытие опроса, исправлены роли состояний, очищена локализация",
+        "pt": "(S. Bott) Correcao dos achados da revisao de PR: configuracoes personalizadas preservadas ao reiniciar, sondagem sobreposta evitada, funcoes de estado corrigidas, i18n limpo",
+        "nl": "(S. Bott) PR-reviewbevindingen opgelost: aangepaste objectinstellingen blijven behouden bij herstart, overlappende polling voorkomen, state-rollen gecorrigeerd, i18n opgeschoond",
+        "fr": "(S. Bott) Correction des resultats de la revue PR : les parametres personnalises sont conserves au redemarrage, plus de sondages superposes, roles d'etat corriges, i18n nettoye",
+        "it": "(S. Bott) Corretti i risultati della revisione PR: le impostazioni personalizzate vengono preservate al riavvio, evitati polling sovrapposti, ruoli di stato corretti, i18n ripulito",
+        "es": "(S. Bott) Correccion de hallazgos de revision PR: la configuracion personalizada se conserva al reiniciar, se evita el sondeo superpuesto, roles de estado corregidos, i18n depurado",
+        "pl": "(S. Bott) Naprawiono uwagi z przegladu PR: niestandardowe ustawienia obiektow sa zachowywane po restarcie, uniknięto nakładajacych sie odpytywan, poprawiono role stanow, uporzadkowano i18n",
+        "uk": "(S. Bott) Виправлено зауваження PR-огляду: користувацькі налаштування об'єктів зберігаються після перезапуску, усунено накладання опитувань, виправлено ролі станів, впорядковано i18n",
+        "zh-cn": "(S. Bott) 修复PR审查发现的问题：重启后保留自定义对象设置，避免轮询重叠，修正状态角色，清理i18n"
+      },
       "0.2.2": {
         "en": "(S. Bott) Fix vertical_direction write flag not applied on existing installations",
         "de": "(S. Bott) vertical_direction: Schreibflag wird nun auch bei bestehenden Installationen aktualisiert",
@@ -80,58 +93,6 @@
         "pl": "(S. Bott) Naprawiono ostrzeżenia 'no existing object' przy adresie MAC małymi literami\n(S. Bott) Naprawiono literówkę: info.connected → info.connection",
         "uk": "(S. Bott) Виправлено попередження 'no existing object' при введенні MAC-адреси малими літерами\n(S. Bott) Виправлено друкарську помилку: info.connected → info.connection",
         "zh-cn": "(S. Bott) 修复输入小写MAC地址时的'no existing object'警告\n(S. Bott) 修复拼写错误: info.connected → info.connection"
-      },
-      "0.1.4": {
-        "en": "(S. Bott) Fix all repository checker errors and warnings (issue #86)\n(S. Bott) Add missing i18n translations for all languages\n(S. Bott) Add prettier.config.mjs, fix eslint config import\n(S. Bott) Upgrade to TypeScript 6\n(S. Bott) Update all dependencies to latest versions",
-        "de": "(S. Bott) Alle Repository-Checker-Fehler und Warnungen behoben (Issue #86)\n(S. Bott) Fehlende i18n-Übersetzungen für alle Sprachen ergänzt\n(S. Bott) prettier.config.mjs hinzugefügt, eslint-Config-Import korrigiert\n(S. Bott) Upgrade auf TypeScript 6\n(S. Bott) Alle Abhängigkeiten auf neueste Versionen aktualisiert",
-        "ru": "(S. Bott) Исправлены все ошибки и предупреждения проверки репозитория (issue #86)\n(S. Bott) Добавлены недостающие переводы i18n для всех языков\n(S. Bott) Добавлен prettier.config.mjs, исправлен импорт конфигурации eslint\n(S. Bott) Обновление до TypeScript 6\n(S. Bott) Все зависимости обновлены до последних версий",
-        "pt": "(S. Bott) Corrigidos todos os erros e avisos do verificador de repositório (issue #86)\n(S. Bott) Adicionadas traduções i18n ausentes para todos os idiomas\n(S. Bott) Adicionado prettier.config.mjs, corrigida importação de configuração eslint\n(S. Bott) Atualizado para TypeScript 6\n(S. Bott) Todas as dependências atualizadas para as últimas versões",
-        "nl": "(S. Bott) Alle fouten en waarschuwingen van de repository-checker opgelost (issue #86)\n(S. Bott) Ontbrekende i18n-vertalingen voor alle talen toegevoegd\n(S. Bott) prettier.config.mjs toegevoegd, eslint-configuratie-import gecorrigeerd\n(S. Bott) Upgrade naar TypeScript 6\n(S. Bott) Alle afhankelijkheden bijgewerkt naar nieuwste versies",
-        "fr": "(S. Bott) Correction de toutes les erreurs et avertissements du vérificateur de dépôt (issue #86)\n(S. Bott) Ajout des traductions i18n manquantes pour toutes les langues\n(S. Bott) Ajout de prettier.config.mjs, correction de l'import de configuration eslint\n(S. Bott) Mise à niveau vers TypeScript 6\n(S. Bott) Toutes les dépendances mises à jour vers les dernières versions",
-        "it": "(S. Bott) Corretti tutti gli errori e avvisi del verificatore del repository (issue #86)\n(S. Bott) Aggiunte le traduzioni i18n mancanti per tutte le lingue\n(S. Bott) Aggiunto prettier.config.mjs, corretto l'import della configurazione eslint\n(S. Bott) Aggiornato a TypeScript 6\n(S. Bott) Tutte le dipendenze aggiornate alle ultime versioni",
-        "es": "(S. Bott) Corrección de todos los errores y advertencias del verificador de repositorio (issue #86)\n(S. Bott) Añadidas traducciones i18n faltantes para todos los idiomas\n(S. Bott) Añadido prettier.config.mjs, corregida importación de configuración eslint\n(S. Bott) Actualización a TypeScript 6\n(S. Bott) Todas las dependencias actualizadas a las últimas versiones",
-        "pl": "(S. Bott) Naprawiono wszystkie błędy i ostrzeżenia sprawdzania repozytorium (issue #86)\n(S. Bott) Dodano brakujące tłumaczenia i18n dla wszystkich języków\n(S. Bott) Dodano prettier.config.mjs, naprawiono import konfiguracji eslint\n(S. Bott) Aktualizacja do TypeScript 6\n(S. Bott) Wszystkie zależności zaktualizowane do najnowszych wersji",
-        "uk": "(S. Bott) Виправлено всі помилки та попередження перевірки репозиторію (issue #86)\n(S. Bott) Додано відсутні переклади i18n для всіх мов\n(S. Bott) Додано prettier.config.mjs, виправлено імпорт конфігурації eslint\n(S. Bott) Оновлення до TypeScript 6\n(S. Bott) Всі залежності оновлено до останніх версій",
-        "zh-cn": "(S. Bott) 修复所有仓库检查器错误和警告 (issue #86)\n(S. Bott) 为所有语言添加缺失的i18n翻译\n(S. Bott) 添加prettier.config.mjs，修复eslint配置导入\n(S. Bott) 升级到TypeScript 6\n(S. Bott) 更新所有依赖到最新版本"
-      },
-      "0.1.3": {
-        "en": "(S. Bott) Resolve all ioBroker repository checker errors, warnings, and suggestions\n(S. Bott) Update Node.js requirement to >=22 and GitHub Actions to Node 24.x\n(S. Bott) Migrate to ESLint 9 flat config with @iobroker/eslint-config\n(S. Bott) Replace setTimeout/setInterval with adapter methods\n(S. Bott) Update all dependencies to latest versions",
-        "de": "(S. Bott) Alle ioBroker Repository-Checker-Fehler, Warnungen und Vorschläge behoben\n(S. Bott) Node.js-Anforderung auf >=22 und GitHub Actions auf Node 24.x aktualisiert\n(S. Bott) Migration auf ESLint 9 Flat Config mit @iobroker/eslint-config\n(S. Bott) setTimeout/setInterval durch Adapter-Methoden ersetzt\n(S. Bott) Alle Abhängigkeiten auf neueste Versionen aktualisiert",
-        "ru": "(S. Bott) Исправлены все ошибки, предупреждения и предложения проверки репозитория ioBroker\n(S. Bott) Требование Node.js обновлено до >=22, GitHub Actions до Node 24.x\n(S. Bott) Миграция на ESLint 9 flat config с @iobroker/eslint-config\n(S. Bott) setTimeout/setInterval заменены на методы адаптера\n(S. Bott) Все зависимости обновлены до последних версий",
-        "pt": "(S. Bott) Resolução de todos os erros, avisos e sugestões do verificador de repositório ioBroker\n(S. Bott) Requisito Node.js atualizado para >=22 e GitHub Actions para Node 24.x\n(S. Bott) Migração para ESLint 9 flat config com @iobroker/eslint-config\n(S. Bott) setTimeout/setInterval substituídos por métodos do adaptador\n(S. Bott) Todas as dependências atualizadas para as últimas versões",
-        "nl": "(S. Bott) Alle fouten, waarschuwingen en suggesties van de ioBroker repository-checker opgelost\n(S. Bott) Node.js-vereiste bijgewerkt naar >=22 en GitHub Actions naar Node 24.x\n(S. Bott) Migratie naar ESLint 9 flat config met @iobroker/eslint-config\n(S. Bott) setTimeout/setInterval vervangen door adaptermethoden\n(S. Bott) Alle afhankelijkheden bijgewerkt naar nieuwste versies",
-        "fr": "(S. Bott) Résolution de toutes les erreurs, avertissements et suggestions du vérificateur de dépôt ioBroker\n(S. Bott) Exigence Node.js mise à jour vers >=22 et GitHub Actions vers Node 24.x\n(S. Bott) Migration vers ESLint 9 flat config avec @iobroker/eslint-config\n(S. Bott) setTimeout/setInterval remplacés par les méthodes de l'adaptateur\n(S. Bott) Toutes les dépendances mises à jour vers les dernières versions",
-        "it": "(S. Bott) Risolti tutti gli errori, avvisi e suggerimenti del verificatore del repository ioBroker\n(S. Bott) Requisito Node.js aggiornato a >=22 e GitHub Actions a Node 24.x\n(S. Bott) Migrazione a ESLint 9 flat config con @iobroker/eslint-config\n(S. Bott) setTimeout/setInterval sostituiti con i metodi dell'adattatore\n(S. Bott) Tutte le dipendenze aggiornate alle ultime versioni",
-        "es": "(S. Bott) Resolución de todos los errores, advertencias y sugerencias del verificador de repositorio ioBroker\n(S. Bott) Requisito Node.js actualizado a >=22 y GitHub Actions a Node 24.x\n(S. Bott) Migración a ESLint 9 flat config con @iobroker/eslint-config\n(S. Bott) setTimeout/setInterval reemplazados por métodos del adaptador\n(S. Bott) Todas las dependencias actualizadas a las últimas versiones",
-        "pl": "(S. Bott) Naprawiono wszystkie błędy, ostrzeżenia i sugestie sprawdzania repozytorium ioBroker\n(S. Bott) Wymaganie Node.js zaktualizowano do >=22 i GitHub Actions do Node 24.x\n(S. Bott) Migracja do ESLint 9 flat config z @iobroker/eslint-config\n(S. Bott) setTimeout/setInterval zastąpione metodami adaptera\n(S. Bott) Wszystkie zależności zaktualizowane do najnowszych wersji",
-        "uk": "(S. Bott) Виправлено всі помилки, попередження та пропозиції перевірки репозиторію ioBroker\n(S. Bott) Вимогу Node.js оновлено до >=22, GitHub Actions до Node 24.x\n(S. Bott) Міграція на ESLint 9 flat config з @iobroker/eslint-config\n(S. Bott) setTimeout/setInterval замінено методами адаптера\n(S. Bott) Всі залежності оновлено до останніх версій",
-        "zh-cn": "(S. Bott) 解决ioBroker仓库检查器的所有错误、警告和建议\n(S. Bott) Node.js要求更新为>=22，GitHub Actions更新为Node 24.x\n(S. Bott) 迁移到ESLint 9 flat config与@iobroker/eslint-config\n(S. Bott) 将setTimeout/setInterval替换为适配器方法\n(S. Bott) 更新所有依赖到最新版本"
-      },
-      "0.1.1": {
-        "en": "(S. Bott) Fix ioBroker repository checker errors and warnings\n(S. Bott) Update dependencies (axios, sinon, typescript-eslint, etc.)\n(S. Bott) Fix setTimeout memory leak\n(S. Bott) Fix ESLint compatibility with TypeScript ESLint v8",
-        "de": "(S. Bott) ioBroker Repository-Checker-Fehler und Warnungen behoben\n(S. Bott) Abhängigkeiten aktualisiert (axios, sinon, typescript-eslint, etc.)\n(S. Bott) setTimeout-Speicherleck behoben\n(S. Bott) ESLint-Kompatibilität mit TypeScript ESLint v8 behoben",
-        "ru": "(S. Bott) Исправлены ошибки и предупреждения проверки репозитория ioBroker\n(S. Bott) Обновлены зависимости (axios, sinon, typescript-eslint и др.)\n(S. Bott) Исправлена утечка памяти setTimeout\n(S. Bott) Исправлена совместимость ESLint с TypeScript ESLint v8",
-        "pt": "(S. Bott) Correção de erros e avisos do verificador de repositório ioBroker\n(S. Bott) Atualização de dependências (axios, sinon, typescript-eslint, etc.)\n(S. Bott) Correção de vazamento de memória setTimeout\n(S. Bott) Correção de compatibilidade ESLint com TypeScript ESLint v8",
-        "nl": "(S. Bott) ioBroker repository-checker fouten en waarschuwingen opgelost\n(S. Bott) Afhankelijkheden bijgewerkt (axios, sinon, typescript-eslint, etc.)\n(S. Bott) setTimeout geheugenlek opgelost\n(S. Bott) ESLint-compatibiliteit met TypeScript ESLint v8 opgelost",
-        "fr": "(S. Bott) Correction des erreurs et avertissements du vérificateur de dépôt ioBroker\n(S. Bott) Mise à jour des dépendances (axios, sinon, typescript-eslint, etc.)\n(S. Bott) Correction de la fuite mémoire setTimeout\n(S. Bott) Correction de la compatibilité ESLint avec TypeScript ESLint v8",
-        "it": "(S. Bott) Corretti errori e avvisi del verificatore del repository ioBroker\n(S. Bott) Aggiornamento delle dipendenze (axios, sinon, typescript-eslint, ecc.)\n(S. Bott) Correzione della perdita di memoria setTimeout\n(S. Bott) Correzione della compatibilità ESLint con TypeScript ESLint v8",
-        "es": "(S. Bott) Corrección de errores y advertencias del verificador de repositorio ioBroker\n(S. Bott) Actualización de dependencias (axios, sinon, typescript-eslint, etc.)\n(S. Bott) Corrección de fuga de memoria setTimeout\n(S. Bott) Corrección de compatibilidad ESLint con TypeScript ESLint v8",
-        "pl": "(S. Bott) Naprawiono błędy i ostrzeżenia sprawdzania repozytorium ioBroker\n(S. Bott) Zaktualizowano zależności (axios, sinon, typescript-eslint itp.)\n(S. Bott) Naprawiono wyciek pamięci setTimeout\n(S. Bott) Naprawiono kompatybilność ESLint z TypeScript ESLint v8",
-        "uk": "(S. Bott) Виправлено помилки та попередження перевірки репозиторію ioBroker\n(S. Bott) Оновлено залежності (axios, sinon, typescript-eslint тощо)\n(S. Bott) Виправлено витік пам'яті setTimeout\n(S. Bott) Виправлено сумісність ESLint з TypeScript ESLint v8",
-        "zh-cn": "(S. Bott) 修复ioBroker仓库检查器错误和警告\n(S. Bott) 更新依赖 (axios, sinon, typescript-eslint等)\n(S. Bott) 修复setTimeout内存泄漏\n(S. Bott) 修复ESLint与TypeScript ESLint v8的兼容性"
-      },
-      "0.1.0": {
-        "en": "initial release",
-        "de": "Erstveröffentlichung",
-        "ru": "первый выпуск",
-        "pt": "lançamento inicial",
-        "nl": "eerste versie",
-        "fr": "première version",
-        "it": "versione iniziale",
-        "es": "versión inicial",
-        "pl": "pierwsze wydanie",
-        "uk": "перший випуск",
-        "zh-cn": "初始版本"
       }
     },
     "titleLang": {

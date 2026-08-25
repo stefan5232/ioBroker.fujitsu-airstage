@@ -15,7 +15,7 @@
 
 This adapter enables control of Fujitsu Airstage air conditioners via ioBroker. The air conditioning units must be equipped with a WiFi module and be accessible in the local network.
 
-**Disclaimer**: This adapter is an independent community project and is not affiliated with Fujitsu Limited or its subsidiaries. "Fujitsu" and "Airstage" are registered trademarks of Fujitsu Limited. Their use is solely for the purpose of identifying compatible devices.
+**Disclaimer**: This adapter is an independent community project and is not affiliated with Fujitsu Limited or its subsidiaries. "Fujitsu" and "Airstage" are registered trademarks of Fujitsu Limited. Their use is solely for the purpose of identifying compatible devices. See the official [Fujitsu Airstage product page](https://www.fujitsu-general.com/us/products/split/) for supported devices.
 
 ### Features
 
@@ -118,6 +118,11 @@ The following data points are created for each configured device:
     Placeholder for the next version (at the beginning of the line):
     ### **WORK IN PROGRESS**
 -->
+
+### 0.2.3 (2026-08-25)
+* (S. Bott) Fix PR review findings: preserve custom object settings on restart, avoid overlapping polling calls, correct state roles
+* (S. Bott) Clean up i18n keys in jsonConfig.json and translation files
+* (S. Bott) Add link to official Fujitsu Airstage product page in README
 
 ### 0.2.2 (2026-07-07)
 * (S. Bott) Fix vertical_direction write flag not applied on existing installations

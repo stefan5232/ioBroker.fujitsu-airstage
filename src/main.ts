@@ -63,7 +63,8 @@ type VerticalDirection = 'highest' | 'high' | 'low' | 'lowest';
 
 class FujitsuAirstage extends utils.Adapter {
     private devices: AirstageDevice[] = [];
-    private updateInterval: ioBroker.Interval | null | undefined = null;
+    private pollTimeout: ioBroker.Timeout | undefined = undefined;
+    private pollingStopped = false;
     private updateTimeouts: (ioBroker.Timeout | undefined)[] = [];
 
     public constructor(options: Partial<utils.AdapterOptions> = {}) {
@@ -252,14 +253,14 @@ class FujitsuAirstage extends utils.Adapter {
                 id: 'model',
                 name: 'Device Model',
                 type: 'string' as const,
-                role: 'info.name',
+                role: 'info.model',
                 write: false,
             },
             {
                 id: 'powerful',
                 name: 'Powerful Mode',
                 type: 'boolean' as const,
-                role: 'switch',
+                role: 'switch.mode.boost',
                 write: true,
             },
             {
@@ -280,8 +281,8 @@ class FujitsuAirstage extends utils.Adapter {
                 id: 'power_consumption',
                 name: 'Power Consumption',
                 type: 'number' as const,
-                role: 'value.power.consumption',
-                unit: 'W',
+                role: 'value.power.consumed',
+                unit: 'Wh',
                 write: false,
             },
             {
@@ -329,7 +330,7 @@ class FujitsuAirstage extends utils.Adapter {
                 id: 'outdoor_low_noise',
                 name: 'Outdoor Unit Low Noise',
                 type: 'boolean' as const,
-                role: 'switch',
+                role: 'switch.mode.silent',
                 write: true,
             },
             {
@@ -368,11 +369,15 @@ class FujitsuAirstage extends utils.Adapter {
                 ...(state.states && { states: state.states }),
             };
 
-            await this.setObject(`${deviceId}.${state.id}`, {
-                type: 'state',
-                common,
-                native: {},
-            });
+            await this.extendObject(
+                `${deviceId}.${state.id}`,
+                {
+                    type: 'state',
+                    common,
+                    native: {},
+                },
+                { preserve: { common: { name: true } } },
+            );
         }
     }
 
@@ -793,20 +798,27 @@ class FujitsuAirstage extends utils.Adapter {
         const rawInterval = this.typedConfig.pollInterval || 30;
         const interval = Math.max(10, Math.min(3600, rawInterval)) * 1000;
 
-        this.updateInterval = this.setInterval(async () => {
+        const poll = async (): Promise<void> => {
             for (const device of this.devices) {
                 await this.updateDeviceData(device);
             }
-        }, interval);
+
+            if (!this.pollingStopped) {
+                this.pollTimeout = this.setTimeout(poll, interval);
+            }
+        };
+
+        this.pollTimeout = this.setTimeout(poll, interval);
 
         this.log.info(`Started polling with ${interval / 1000}s interval for ${this.devices.length} device(s)`);
     }
 
     private onUnload(callback: () => void): void {
         try {
-            if (this.updateInterval) {
-                clearInterval(this.updateInterval);
-                this.updateInterval = null;
+            this.pollingStopped = true;
+            if (this.pollTimeout) {
+                this.clearTimeout(this.pollTimeout);
+                this.pollTimeout = undefined;
             }
             // Clear all pending update timeouts
             for (const timeout of this.updateTimeouts) {
