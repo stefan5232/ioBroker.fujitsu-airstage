@@ -414,7 +414,7 @@ class FujitsuAirstage extends utils.Adapter {
         if (data.iu_fan_ctrl !== void 0) {
           await this.setState(`${device.deviceId}.fan_ctrl`, parseInt(String(data.iu_fan_ctrl)) === 1, true);
         }
-        if (data.iu_set_tmp !== void 0) {
+        if (data.iu_set_tmp !== void 0 && parseInt(String(data.iu_set_tmp)) !== 65535) {
           await this.setState(
             `${device.deviceId}.target_temperature`,
             parseInt(String(data.iu_set_tmp)) / 10,
@@ -658,20 +658,20 @@ class FujitsuAirstage extends utils.Adapter {
   mapFanSpeed(speed) {
     const speeds = {
       0: "auto",
-      1: "quiet",
-      2: "low",
-      3: "medium",
-      4: "high"
+      2: "quiet",
+      5: "low",
+      8: "medium",
+      11: "high"
     };
     return speeds[speed] || "auto";
   }
   mapFanSpeedReverse(speed) {
     const speeds = {
       auto: 0,
-      quiet: 1,
-      low: 2,
-      medium: 3,
-      high: 4
+      quiet: 2,
+      low: 5,
+      medium: 8,
+      high: 11
     };
     return speeds[speed] || 0;
   }
