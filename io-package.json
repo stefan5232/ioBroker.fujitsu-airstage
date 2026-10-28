@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "fujitsu-airstage",
-    "version": "0.2.4",
+    "version": "0.2.5",
     "news": {
+      "0.2.5": {
+        "en": "(S. Bott) Fix fan speed mapping to the Airstage API values so quiet/low/medium/high take effect, ignore the 'no set point' value in fan-only mode, add Node.js 26 tests",
+        "de": "(S. Bott) Luefterstufen-Zuordnung an die Airstage-API-Werte angepasst, sodass quiet/low/medium/high wirken; 'kein Sollwert'-Wert im Luefter-Modus ignoriert; Node.js-26-Tests ergaenzt",
+        "ru": "(S. Bott) Исправлено сопоставление скоростей вентилятора со значениями API Airstage (quiet/low/medium/high теперь работают), игнорируется значение «нет уставки» в режиме вентилятора, добавлены тесты Node.js 26",
+        "pt": "(S. Bott) Mapeamento da velocidade do ventilador corrigido para os valores da API Airstage (quiet/low/medium/high agora funcionam), valor 'sem setpoint' ignorado no modo ventilador, testes com Node.js 26 adicionados",
+        "nl": "(S. Bott) Ventilatorsnelheid-mapping aangepast aan de Airstage-API-waarden (quiet/low/medium/high werken nu), waarde 'geen instelpunt' in ventilatormodus genegeerd, Node.js 26-tests toegevoegd",
+        "fr": "(S. Bott) Correction de la correspondance des vitesses de ventilation avec les valeurs de l'API Airstage (quiet/low/medium/high fonctionnent), valeur 'pas de consigne' ignoree en mode ventilation, tests Node.js 26 ajoutes",
+        "it": "(S. Bott) Corretta la mappatura della velocita della ventola sui valori dell'API Airstage (quiet/low/medium/high ora funzionano), ignorato il valore 'nessun setpoint' in modalita ventilazione, aggiunti test Node.js 26",
+        "es": "(S. Bott) Corregida la asignacion de velocidad del ventilador a los valores de la API Airstage (quiet/low/medium/high ahora funcionan), ignorado el valor 'sin consigna' en modo ventilador, anadidas pruebas con Node.js 26",
+        "pl": "(S. Bott) Poprawiono mapowanie predkosci wentylatora na wartosci API Airstage (quiet/low/medium/high teraz dzialaja), ignorowanie wartosci 'brak wartosci zadanej' w trybie wentylatora, dodano testy Node.js 26",
+        "uk": "(S. Bott) Виправлено відповідність швидкостей вентилятора значенням API Airstage (quiet/low/medium/high тепер працюють), ігнорується значення «немає уставки» в режимі вентилятора, додано тести Node.js 26",
+        "zh-cn": "(S. Bott) 修正风速映射以匹配Airstage API值（quiet/low/medium/high现已生效），忽略仅送风模式下的“无设定点”值，新增Node.js 26测试"
+      },
       "0.2.4": {
         "en": "(S. Bott) Fix power_consumption role to match cumulative Wh value, correct mistranslated IP/Name/Device ID labels, fix info.connection name on existing installations",
         "de": "(S. Bott) Rolle von power_consumption korrigiert (kumulierter Wh-Wert), fehlerhafte Uebersetzungen fuer IP/Name/Geraete-ID behoben, info.connection-Name bei bestehenden Installationen korrigiert",
